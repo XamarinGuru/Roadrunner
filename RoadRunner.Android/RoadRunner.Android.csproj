@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{46395EDB-C964-4A9D-AE37-A534F9EE0BB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RoadRunner.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>RoadRunner.Android</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+<EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+<AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+<AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="AndHUD">
+      <HintPath>..\Components\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.6.2.0\lib\portable-net45+wp80+win8+wpa81\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\monoandroid1\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\monoandroid1\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\monoandroid1\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Card.IO.Android">
+      <HintPath>..\Components\cardioandroid-5.3.4.0\lib\android\Card.IO.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\MonoAndroid10\Plugin.Messaging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\MonoAndroid10\Plugin.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\Components\facebook-sdk-6.2.2\lib\android\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Location">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Location.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Plus">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
+    </Reference>
+    <Reference Include="Auth0Client.Android">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Auth0Client.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.Android">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Xamarin.Auth.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="RoundedImageView">
+      <HintPath>..\Components\RoundedImageView-2.2.1\lib\android\RoundedImageView.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkIO">
+      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.Picasso">
+      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activity\LoginActivity.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Utilities\GestureListener.cs" />
+    <Compile Include="Adapter\MenuListAdapter.cs" />
+    <Compile Include="Model\Menu_Item.cs" />
+    <Compile Include="Fragment\HomeFragment.cs" />
+    <Compile Include="Activity\NavigationActivity.cs" />
+    <Compile Include="Activity\RideInformationActivity.cs" />
+    <Compile Include="Activity\RidePaymentActivity.cs" />
+    <Compile Include="Activity\ThankYouActivity.cs" />
+    <Compile Include="Activity\RideConfirmationActivity.cs" />
+    <Compile Include="Fragment\RideInformationFragment.cs" />
+    <Compile Include="Fragment\PaymentInfoFragment.cs" />
+    <Compile Include="Fragment\MyTripsFragment.cs" />
+    <Compile Include="Fragment\SupportFragment.cs" />
+    <Compile Include="Fragment\TermsFragment.cs" />
+    <Compile Include="Utilities\AppSettings.cs" />
+    <Compile Include="Activity\BaseActivity.cs" />
+    <Compile Include="Activity\PickupLocationActivity.cs" />
+    <Compile Include="Adapter\CreditCardAdapter.cs" />
+    <Compile Include="Activity\AddPaymentActivity.cs" />
+    <Compile Include="Activity\DateTimePickerActivity.cs" />
+    <Compile Include="Adapter\TripAdapter.cs" />
+    <Compile Include="Activity\LocationPickupActivity.cs" />
+    <Compile Include="Activity\LocationDropoffActivity.cs" />
+    <Compile Include="Activity\LocationZipActivity.cs" />
+    <Compile Include="Activity\SignUpActivity.cs" />
+    <Compile Include="Activity\TermsActivity.cs" />
+    <Compile Include="Activity\ForgotPasswordActivity.cs" />
+    <Compile Include="Adapter\MapMarkerAdapter.cs" />
+    <Compile Include="Utilities\MomentUtil.cs" />
+    <Compile Include="Activity\EditReservationActivity.cs" />
+    <Compile Include="Activity\CancelReservationActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bg_login.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_facebook.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_google.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_login.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_signup.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_loginwith.png" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_clock.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_payment.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_setting.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_support.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_terms.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\micon_user.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_mark.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_avatar.png" />
+    <AndroidResource Include="Resources\layout\item_menu.axml" />
+    <AndroidResource Include="Resources\layout\fragment_home.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_card.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_gift.png" />
+    <AndroidResource Include="Resources\layout\RideInformatioin.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_back.png" />
+    <AndroidResource Include="Resources\Anim\back.axml" />
+    <AndroidResource Include="Resources\layout\LocationPickup.axml" />
+    <AndroidResource Include="Resources\layout\RidePayment.axml" />
+    <AndroidResource Include="Resources\layout\RideConfirmation.axml" />
+    <AndroidResource Include="Resources\layout\ThankYou.axml" />
+    <AndroidResource Include="Resources\Anim\fromRight.axml" />
+    <AndroidResource Include="Resources\Anim\toLeft.axml" />
+    <AndroidResource Include="Resources\Anim\fromLeft.axml" />
+    <AndroidResource Include="Resources\Anim\toRight.axml" />
+    <AndroidResource Include="Resources\layout\fragment_rideInformation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_paymentInfo.axml" />
+    <AndroidResource Include="Resources\layout\fragment_myTrips.axml" />
+    <AndroidResource Include="Resources\layout\fragment_support.axml" />
+    <AndroidResource Include="Resources\layout\fragment_terms.axml" />
+    <AndroidResource Include="Resources\layout\Login.axml" />
+    <AndroidResource Include="Resources\layout\PickupLocation.axml" />
+    <AndroidResource Include="Resources\layout\item_location.axml" />
+    <AndroidResource Include="Resources\layout\item_card.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\card_amer.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\card_diner.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\card_discover.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\card_master.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\card_visa.png" />
+    <AndroidResource Include="Resources\layout\item_addCard.axml" />
+    <AndroidResource Include="Resources\layout\AddPayment.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_calendar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_password.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_user.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_zip.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\component_rbtn_selector.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\component_rbtn_textcolor_selector.axml" />
+    <AndroidResource Include="Resources\layout\DateTimePicker.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_add.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_default_flight.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_car.png" />
+    <AndroidResource Include="Resources\layout\item_upcomingTrip.axml" />
+    <AndroidResource Include="Resources\layout\item_completedTrip.axml" />
+    <AndroidResource Include="Resources\layout\item_spinner.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_circle.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vehicle_black.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vehicle_bus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vehicle_limo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vehicle_private.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vehicle_suv.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_shared.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_private.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_black.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_suv.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_limo.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_bus.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\s_vehicle_wheel.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_wheelchair.png" />
+    <AndroidResource Include="Resources\layout\LocationDropoff.axml" />
+    <AndroidResource Include="Resources\layout\LocationZip.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_home.png" />
+    <AndroidResource Include="Resources\layout\SignUp.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_email.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_phone.png" />
+    <AndroidResource Include="Resources\layout\Terms.axml" />
+    <AndroidResource Include="Resources\layout\ForgotPassword.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\my_button.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\btnReadyForPickup.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\btnCancelTrip.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw300dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw300dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw360dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw360dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw420dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw420dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw480dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw480dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw540dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw540dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw600dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw600dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw660dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw660dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw720dp\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-sw720dp\positive_sdps.xml" />
+    <AndroidResource Include="Resources\values-xlarge\negtive_sdps.xml" />
+    <AndroidResource Include="Resources\values-xlarge\positive_sdps.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_mylocation.png" />
+    <AndroidResource Include="Resources\layout\item_mapMarker.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_marker.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_map_bus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_map_limo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_map_shuttle.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_map_suv.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_map_towncar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btnReadyForPickup_disable.axml" />
+    <AndroidResource Include="Resources\layout\EditReservation.axml" />
+    <AndroidResource Include="Resources\layout\CancelReservation.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
+  <ItemGroup>
+    <Folder Include="Activity\" />
+    <Folder Include="Model\" />
+    <Folder Include="Adapter\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Fragment\" />
+    <Folder Include="Resources\Anim\" />
+    <Folder Include="Resources\style\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <Version>1.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="cardioandroid">
+      <Version>5.3.4.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Xam.Plugins.Messaging">
+      <Version>3.2.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebook-sdk">
+      <Version>6.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplayservices-maps">
+      <Version>29.0.0.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplayservices-plus">
+      <Version>29.0.0.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Auth0Client">
+      <Version>0.5.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="RoundedImageView">
+      <Version>2.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoadRunner.Shared\RoadRunner.Shared.csproj">
+      <Project>{CC7D4DFF-2433-405C-B443-9C8DA93D51E8}</Project>
+      <Name>RoadRunner.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">ROADRUNNER SHUTTLE</string>
+
+	<string name="email_hint">name@example.com</string>
+	<string name="password_hint">Password</string>
+    <string name="call_roadrunner"><u>Call Roadrunner at 800-247-7919</u></string> 
+
+	<string name="support_email"><u>support@rrshuttle.com</u></string> 
+	<string name="support_phone"><u>Phone: (805) 389-8496</u></string> 
+	<string name="support_free"><u>Toll Free: (805) 247-7919</u></string> 
+
+	<string name="lbl_termsofservice"><u>View Terms Of Service</u></string> 
+
+	<string name="m_user">Erlend Frendsen</string> 
+	<string name="m_home">Home</string> 
+	<string name="m_book_ride">Book a Ride</string> 
+	<string name="m_payment">Payment</string> 
+	<string name="m_my_trip">My Trips</string> 
+	<string name="m_support">Supports</string> 
+	<string name="m_terms">Terms</string> 
+	<string name="m_logout">Change Login</string> 
+
+	<string name="v_home">ROADRUNNER SHUTTLE</string> 
+	<string name="v_book_ride">RIDE INFORMATION</string> 
+	<string name="v_payment">PAYMENT INFO</string> 
+	<string name="v_my_trip">MY TRIPS</string> 
+	<string name="v_support">SUPPORT</string> 
+	<string name="v_terms">TERMS OF SERVICE</string> 
+
+
+	<string name="spinner_passengers">select number</string> 
+
+	  <string name="map_not_ready">Map is not ready yet</string>
+
+	<string name="server_client_id">624483098115-g4d2d5dpq5kg5vnsetivq4dln7i0cns2.apps.googleusercontent.com</string>
+</resources>

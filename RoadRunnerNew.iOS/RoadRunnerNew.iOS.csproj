@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{4DE3A233-8371-4E17-B9D6-BB9C7671A83D}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RoadRunnerNew.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <XamarinInsightsApiKey>37f8347b1aa3979ce023e220274aa739d6ea73ba</XamarinInsightsApiKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <AssemblyName>FirstSingleViewApp</AssemblyName>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <AssemblyName>FirstSingleViewApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <AssemblyName>RoardRunner</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>RoardRunner</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <AssemblyName>RoardRunner</AssemblyName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <AssemblyName>RoardRunner</AssemblyName>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
+    <OutputPath>bin\Ad-Hoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AssemblyName>FirstSingleViewApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|iPhoneSimulator'">
+    <OutputPath>bin\AppStore</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <AssemblyName>FirstSingleViewApp</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\AppSettings.cs" />
+    <Compile Include="Core\LocationHelper.cs" />
+    <Compile Include="Core\PickerChangedEventArgs.cs" />
+    <Compile Include="Core\PickerModel.cs" />
+    <Compile Include="Core\TextHelper.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="SplashScreen.designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <InterfaceDefinition Include="SplashScreen.storyboard" />
+    <Compile Include="ViewControllers\ActiveReservationsViewController.cs" />
+    <Compile Include="ViewControllers\ActiveReservationsViewController.designer.cs">
+      <DependentUpon>ActiveReservationsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\BaseTitleViewController.cs" />
+    <Compile Include="ViewControllers\BaseViewController.cs" />
+    <Compile Include="ViewControllers\BillingInfoViewController.cs" />
+    <Compile Include="ViewControllers\BillingInfoViewController.designer.cs">
+      <DependentUpon>BillingInfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ForgotPasswordController.cs" />
+    <Compile Include="ViewControllers\ForgotPasswordController.designer.cs">
+      <DependentUpon>ForgotPasswordController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\HomeViewController.cs" />
+    <Compile Include="ViewControllers\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="ViewControllers\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MainNavigationController.cs" />
+    <Compile Include="ViewControllers\MainNavigationController.designer.cs">
+      <DependentUpon>MainNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MapViewController.cs" />
+    <Compile Include="ViewControllers\MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\PreviousReservationsViewController.cs" />
+    <Compile Include="ViewControllers\PreviousReservationsViewController.designer.cs">
+      <DependentUpon>PreviousReservationsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RegisterViewController.cs" />
+    <Compile Include="ViewControllers\RegisterViewController.designer.cs">
+      <DependentUpon>RegisterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ResetPasswordViewController.cs" />
+    <Compile Include="ViewControllers\ResetPasswordViewController.designer.cs">
+      <DependentUpon>ResetPasswordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SavedAddressesDetailsViewController.cs" />
+    <Compile Include="ViewControllers\SavedAddressesDetailsViewController.designer.cs">
+      <DependentUpon>SavedAddressesDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SavedAddressesViewController.cs" />
+    <Compile Include="ViewControllers\SavedAddressesViewController.designer.cs">
+      <DependentUpon>SavedAddressesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SupportViewController.cs" />
+    <Compile Include="ViewControllers\SupportViewController.designer.cs">
+      <DependentUpon>SupportViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\TermsOFServiceViewController.cs" />
+    <Compile Include="ViewControllers\TermsOFServiceViewController.designer.cs">
+      <DependentUpon>TermsOFServiceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ReservationsDataSource.cs" />
+    <Compile Include="DataSources\SavedAddressesDataSource.cs" />
+    <Compile Include="DataSources\BillingInfoDataSource.cs" />
+    <Compile Include="ViewControllers\AddCreditCardViewController.cs" />
+    <Compile Include="ViewControllers\AddCreditCardViewController.designer.cs">
+      <DependentUpon>AddCreditCardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPickerChangedEventArgs.cs" />
+    <InterfaceDefinition Include="ViewControllers\MainStoryboard.storyboard" />
+    <Compile Include="Extension\UIButtonExtensions.cs" />
+    <Compile Include="View\PaddingTextField.cs" />
+    <Compile Include="Extension\CustomizationExtension.cs" />
+    <Compile Include="ViewControllers\PickUpViewController.cs" />
+    <Compile Include="ViewControllers\PickUpViewController.designer.cs">
+      <DependentUpon>PickUpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ProfileViewController.cs" />
+    <Compile Include="ViewControllers\ProfileViewController.designer.cs">
+      <DependentUpon>ProfileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\FlightInformationViewController.cs" />
+    <Compile Include="ViewControllers\FlightInformationViewController.designer.cs">
+      <DependentUpon>FlightInformationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\PaymentInformationViewController.cs" />
+    <Compile Include="ViewControllers\PaymentInformationViewController.designer.cs">
+      <DependentUpon>PaymentInformationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RideConfirmViewController.cs" />
+    <Compile Include="ViewControllers\RideConfirmViewController.designer.cs">
+      <DependentUpon>RideConfirmViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ThankyouViewController.cs" />
+    <Compile Include="ViewControllers\ThankyouViewController.designer.cs">
+      <DependentUpon>ThankyouViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MyTripsViewController.cs" />
+    <Compile Include="ViewControllers\MyTripsViewController.designer.cs">
+      <DependentUpon>MyTripsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\TripDataSource.cs" />
+    <Compile Include="DataSources\TripCell.cs" />
+    <Compile Include="DataSources\TripCell.designer.cs">
+      <DependentUpon>TripCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\BillCell.cs" />
+    <Compile Include="DataSources\BillCell.designer.cs">
+      <DependentUpon>BillCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\BillAddCell.cs" />
+    <Compile Include="DataSources\BillAddCell.designer.cs">
+      <DependentUpon>BillAddCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CancelReservationViewController.cs" />
+    <Compile Include="ViewControllers\CancelReservationViewController.designer.cs">
+      <DependentUpon>CancelReservationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\EditReservationViewController.cs" />
+    <Compile Include="ViewControllers\EditReservationViewController.designer.cs">
+      <DependentUpon>EditReservationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\FlightInformationViewController1.cs" />
+    <Compile Include="ViewControllers\FlightInformationViewController1.designer.cs">
+      <DependentUpon>FlightInformationViewController1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\FlightInformationViewController2.cs" />
+    <Compile Include="ViewControllers\FlightInformationViewController2.designer.cs">
+      <DependentUpon>FlightInformationViewController2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MapMarkerView.cs" />
+    <Compile Include="View\MapMarkerView.designer.cs">
+      <DependentUpon>MapMarkerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CompletedTripCell.cs" />
+    <Compile Include="DataSources\CompletedTripCell.designer.cs">
+      <DependentUpon>CompletedTripCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\MyPickerModel.cs" />
+    <Compile Include="DataSources\MapPickerModel.cs" />
+    <Compile Include="ViewControllers\RideInformationViewController.cs" />
+    <Compile Include="ViewControllers\RideInformationViewController.designer.cs">
+      <DependentUpon>RideInformationViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AlertCenter.IOS">
+      <HintPath>..\Components\alert-center-1.0.6\lib\ios-unified\AlertCenter.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.17\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMaps">
+      <HintPath>..\Components\googlemapsios-1.9.2\lib\ios-unified\GoogleMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.6.2.0\lib\portable-net45+wp80+win8+wpa81\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FlyoutNavigation">
+      <HintPath>..\Components\flyoutnavigation-1.5.1\lib\ios-unified\FlyoutNavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Card.IO">
+      <HintPath>..\Components\cardioios-5.1.0.0\lib\ios-unified\Card.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Xamarin.Auth.iOS">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\ios-unified\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=4.5.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Facebook.iOS.4.5.1.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\Xamarin.iOS10\Plugin.Messaging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\Xamarin.iOS10\Plugin.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Social.iOS">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\ios-unified\Xamarin.Social.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Core">
+      <HintPath>..\packages\Xamarin.Google.iOS.Core.1.3.2.2\lib\Xamarin.iOS10\Google.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.SignIn">
+      <HintPath>..\packages\Xamarin.Google.iOS.SignIn.2.4.0.2\lib\Xamarin.iOS10\Google.SignIn.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkedInSignIn">
+      <HintPath>..\Components\LinkedInSignIn-1.0.4\lib\ios-unified\LinkedInSignIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Plus">
+      <HintPath>..\Components\googleplusandplayios-1.7.1.6\lib\ios-unified\Google.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <Content Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="alert-center">
+      <Version>1.0.6</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.17</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebookios">
+      <Version>4.5.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googlemapsios">
+      <Version>1.9.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="flyoutnavigation">
+      <Version>1.5.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="cardioios">
+      <Version>5.1.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplusandplayios">
+      <Version>1.7.1.6</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Xam.Plugins.Messaging">
+      <Version>3.2.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="LinkedInSignIn">
+      <Version>1.0.4</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoadRunner.Shared\RoadRunner.Shared.csproj">
+      <Project>{CC7D4DFF-2433-405C-B443-9C8DA93D51E8}</Project>
+      <Name>RoadRunner.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.props')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.Core.1.3.2.2\build\Xamarin.Google.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.Core.1.3.2.2\build\Xamarin.Google.iOS.Core.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.SignIn.2.4.0.2\build\Xamarin.Google.iOS.SignIn.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.SignIn.2.4.0.2\build\Xamarin.Google.iOS.SignIn.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-amex.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-diners-club.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-diners-club.imageset\fa-cc-diners-club.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-diners-club.imageset\fa-cc-diners-club%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-diners-club.imageset\fa-cc-diners-club%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-discover.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-visa.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oi-credit-card.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oi-credit-card.imageset\oi-credit-card.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oi-credit-card.imageset\oi-credit-card%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oi-credit-card.imageset\oi-credit-card%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add-cc-ic.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add-cc-ic.imageset\add-cc-ic.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add-cc-ic.imageset\add-cc-ic%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add-cc-ic.imageset\add-cc-ic%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Plus.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Plus.imageset\Plus.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Plus.imageset\Plus%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Plus.imageset\Plus%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\suv_map.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\suv_map.imageset\suv_map.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\suv_map.imageset\suv_map%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\suv_map.imageset\suv_map%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen4.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen5.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen6.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginImage.imageset\Login-Screen7.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button5.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button6.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Login-Button7.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button 3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button4.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button5.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SignupButton.imageset\Create-Account-Button6.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button3.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Create-Account-Button1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button4.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button6.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginWithLabel.imageset\Login-With-Button7.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconCar.imageset\Car Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconBus.imageset\Bus Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLimo.imageset\Limo Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconSUV.imageset\SUV Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconVan.imageset\Van Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconMark.imageset\Birdhead-180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconFacebook.imageset\Facebook-180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconGoogle.imageset\Google-Plus-180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconLinkedin.imageset\Linked-In-180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\powered_by_google_on_white.png" />
+    <ImageAsset Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\powered_by_google_on_white%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\powered_by_google_on_white%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_1242x2208.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_640x960.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_640x1136.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_768x1024.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_1536x2048.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_320x480.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_768x1004.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_1536x2008.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Splash-Screen_2048x2732.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-667h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-amex.imageset\american-express-curved-32px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-amex.imageset\american-express-curved-64px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-amex.imageset\american-express-curved-128px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-discover.imageset\discover-curved-32px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-discover.imageset\discover-curved-64px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-discover.imageset\discover-curved-128px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-visa.imageset\visa-curved-32px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-visa.imageset\visa-curved-64px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-visa.imageset\visa-curved-128px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\map_pin.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\icon_map_pin.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\icon_map_pin_100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\icon_map_pin_150.png" />
+    <ImageAsset Include="Resources\Images.xcassets\map_pin.imageset\icon_map_pin.png" />
+    <ImageAsset Include="Resources\Images.xcassets\map_pin.imageset\icon_map_pin_100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\map_pin.imageset\icon_map_pin_150.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-32px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-64px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-128px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 72x72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 57x57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 167x167.png" />
+  </ItemGroup>
+  <Target Name="_CompileITunesMetadata" DependsOnTargets="_DetectSdkLocations;_DetectAppManifest;_GenerateBundleName;_CompileAppManifest">
+    <Message Text="Skipping CompileITunesMetadata task to prevent inclusion of iTunesMetadata.plist in the IPA" />
+  </Target>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_back.png" />
+    <BundleResource Include="Resources\icon_email.png" />
+    <BundleResource Include="Resources\icon_mark.png" />
+    <BundleResource Include="Resources\icon_password.png" />
+    <BundleResource Include="Resources\icon_phone.png" />
+    <BundleResource Include="Resources\icon_user.png" />
+    <BundleResource Include="Resources\icon_payment.png" />
+    <BundleResource Include="Resources\micon_payment.png" />
+    <BundleResource Include="Resources\micon_setting.png" />
+    <BundleResource Include="Resources\micon_support.png" />
+    <BundleResource Include="Resources\micon_terms.png" />
+    <BundleResource Include="Resources\micon_user.png" />
+    <BundleResource Include="Resources\icon_gift.png" />
+    <BundleResource Include="Resources\icon_search.png" />
+    <BundleResource Include="Resources\icon_wheelchair.png" />
+    <BundleResource Include="Resources\icon_carwhite.png" />
+    <BundleResource Include="Resources\icon_menu.png" />
+    <BundleResource Include="Resources\icon_avatar.png" />
+    <BundleResource Include="Resources\Fonts\Raleway-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-ExtraBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-ExtraLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-Heavy.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Raleway-Thin.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\icon_cancel.png" />
+    <BundleResource Include="Resources\icon_default_car.png" />
+    <BundleResource Include="Resources\icon_default_flight.png" />
+    <BundleResource Include="Resources\icon_edit.png" />
+    <BundleResource Include="Resources\micon_clock.png" />
+    <BundleResource Include="Resources\icon_calendar.png" />
+    <BundleResource Include="Resources\icon_plus.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\empty.png" />
+    <BundleResource Include="Resources\oi-credit-card%403x.png" />
+    <BundleResource Include="Resources\icon_circle.png" />
+    <BundleResource Include="Resources\icon_shared.png" />
+    <BundleResource Include="Resources\icon_zip.png" />
+    <BundleResource Include="Resources\icon_home.png" />
+    <BundleResource Include="Resources\icon_map_location.png" />
+    <BundleResource Include="Resources\icon_map_pin_100.png" />
+    <BundleResource Include="Resources\icon_map_pin_150.png" />
+    <BundleResource Include="Resources\icon_map_pin.png" />
+    <BundleResource Include="Resources\icon_marker.png" />
+    <BundleResource Include="Resources\icon_mylocation.png" />
+    <BundleResource Include="Resources\Bus-Icon.png" />
+    <BundleResource Include="Resources\Limo-Icon.png" />
+    <BundleResource Include="Resources\Shuttle-Icon.png" />
+    <BundleResource Include="Resources\SUV-Icon.png" />
+    <BundleResource Include="Resources\Towncar-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images.xcassets\LoginImage.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LoginButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SignupButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LoginWithLabel.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconBus.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconCar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconLimo.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconSUV.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconVan.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconMark.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconFacebook.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconGoogle.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconLinkedin.imageset\" />
+    <Folder Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\map_pin.imageset\" />
+    <Folder Include="Resources\Images.xcassets\IconShare.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="View\MapMarkerView.xib" />
+  </ItemGroup>
+</Project>

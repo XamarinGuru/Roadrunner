@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="MapMarkerView">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_marker.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="42"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shared - 3:45 Pick-up" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="23" y="10" width="230" height="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="1PS-Hf-PY4">
+                    <rect key="frame" x="8" y="3" width="26" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1PS-Hf-PY4" secondAttribute="height" multiplier="7:5" id="0yT-G2-TwJ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20000m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-2U-vdF">
+                    <rect key="frame" x="-94" y="22" width="230" height="10"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1wB-2U-vdF" firstAttribute="centerX" secondItem="1PS-Hf-PY4" secondAttribute="centerX" id="2ZL-R8-JRL"/>
+                <constraint firstItem="1wB-2U-vdF" firstAttribute="width" secondItem="1" secondAttribute="width" id="7Yp-zY-p0c"/>
+                <constraint firstItem="1PS-Hf-PY4" firstAttribute="height" secondItem="1" secondAttribute="height" multiplier="0.45" id="7fd-Uh-8ql"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Tcv-MP-6im"/>
+                <constraint firstItem="1PS-Hf-PY4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="3" id="ae4-DV-GZP"/>
+                <constraint firstItem="5" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" multiplier="1.2" id="bbI-gU-DXP"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="bdg-ho-G64"/>
+                <constraint firstItem="5" firstAttribute="width" secondItem="1" secondAttribute="width" id="boq-Sj-4Em"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="dWE-pa-CCh"/>
+                <constraint firstItem="1PS-Hf-PY4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="gpm-jd-YBB"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="iBf-XR-Wvz"/>
+                <constraint firstItem="5" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" multiplier="0.8" id="mNI-lr-Eim"/>
+                <constraint firstItem="1wB-2U-vdF" firstAttribute="top" secondItem="1PS-Hf-PY4" secondAttribute="bottom" id="pjN-XH-GQN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgPin" destination="4" id="name-outlet-4"/>
+                <outlet property="lblDistance" destination="1wB-2U-vdF" id="name-outlet-1wB-2U-vdF"/>
+                <outlet property="lblInfo" destination="5" id="name-outlet-5"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="435"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_mark.png" width="784" height="541"/>
+        <image name="icon_marker.png" width="239" height="49"/>
+    </resources>
+</document>

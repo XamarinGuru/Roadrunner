@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.looper.loop.PreferencesFragment"
+    android:background="#ffabc8e2">
+<!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="2dp"
+        android:background="#ffabc8e2">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout2"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+            <RadioGroup
+                android:id="@+id/selectTripType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/typeUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/component_rbtn_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="UPCOMING"
+                    android:textColor="@drawable/component_rbtn_textcolor_selector" />
+                <RadioButton
+                    android:id="@+id/typeCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/component_rbtn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="COMPLETED"
+                    android:textColor="@drawable/component_rbtn_textcolor_selector" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout3"
+            android:layout_weight="12"
+            android:layout_margin="5dp">
+            <ListView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/myTripList" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

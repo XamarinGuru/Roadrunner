@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.looper.loop.PreferencesFragment"
+    android:background="#ffabc8e2">
+<!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="2dp"
+        android:background="#ffabc8e2">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:layout_margin="10dp"
+            android:background="#ff000000">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/contentLinear"
+                android:background="#ff132441"
+                android:layout_margin="2dp">
+                <TextView
+                    android:text="Online Reservation Disclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/txtHeader"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="#ffffffff" />
+                <TextView
+                    android:text="Online Reservations must be booked 24 ours in advance. Please note"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/txtBody"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
