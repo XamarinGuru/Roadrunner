@@ -58,7 +58,7 @@ namespace RoadRunnerNew.iOS
 			switch(Facade.Instance.CurrentRide.SelectedFareType)
 			{
 			case 0:
-				iconVehicle.Image = UIImage.FromBundle (@"IconShare");
+				iconVehicle.Image = UIImage.FromBundle (@"IconCar");
 				break;
 			case 1:				
 				iconVehicle.Image = UIImage.FromBundle (@"IconVan");

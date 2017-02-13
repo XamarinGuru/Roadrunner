@@ -105,9 +105,7 @@ namespace RoadRunner.Android
 				txtDropoffLocation.Text = dCity;
 
 				var btnEdit = (Button)convertView.FindViewById(Resource.Id.btnEdit);
-				btnEdit.Tag = trip.ReservationID;
 				var btnCancel = (Button)convertView.FindViewById(Resource.Id.btnCancel);
-				btnCancel.Tag = trip.ReservationID;
 
 				btnEdit.Click -= GoToEditReservationViewController;
 				btnEdit.Click += GoToEditReservationViewController;
@@ -160,39 +158,18 @@ namespace RoadRunner.Android
 				txtDropoffLocation.Text = dCity;
 			}
 
+
 			return convertView;
 		}
 
 		internal void GoToEditReservationViewController(object sender, EventArgs ea)
 		{
-			var button = (Button)sender;
-			var resID = button.Tag;
-
-			for (var i = 0; i < mTripList.Count; i++)
-			{
-				var trip = mTripList[i];
-				if (resID.ToString() == trip.ReservationID)
-				{
-					AppSettings.selectedTrip = trip;
-				}
-			}
-			mSuperActivity.StartActivity(new Intent(mSuperActivity, typeof(EditReservationActivity)));
+			mSuperActivity.StartActivity(new Intent(mSuperActivity, typeof(AddPaymentActivity)));
 			mSuperActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 		}
 		internal void GoToCancelReservationViewController(object sender, EventArgs ea)
 		{
-			var button = (Button)sender;
-			var resID = button.Tag;
-
-			for (var i = 0; i < mTripList.Count; i++)
-			{
-				var trip = mTripList[i];
-				if (resID.ToString() == trip.ReservationID)
-				{
-					AppSettings.selectedTrip = trip;
-				}
-			}
-			mSuperActivity.StartActivity(new Intent(mSuperActivity, typeof(CancelReservationActivity)));
+			mSuperActivity.StartActivity(new Intent(mSuperActivity, typeof(AddPaymentActivity)));
 			mSuperActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 		}
 	}

@@ -8,18 +8,18 @@
         android:id="@+id/titleBarLinearLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
+        android:layout_height="55dp"
         android:background="#ff3c5a7e">
         <ImageButton
             android:id="@+id/btn_back"
             android:scaleType="fitXY"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_width="@dimen/_18sdp"
+            android:layout_height="30dp"
+            android:layout_width="18dp"
             android:padding="0dp"
             android:requiresFadingEdge="none"
             android:fadingEdge="none"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/icon_back" />
         <TextView
             android:id="@+id/v_book_ride"
@@ -30,16 +30,16 @@
             android:layout_gravity="center"
             android:clickable="true"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="18dp"
             android:layout_centerHorizontal="true" />
         <ImageView
             android:src="@drawable/icon_mark"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
             android:id="@+id/imageView1"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
             android:scaleType="fitXY" />
     </RelativeLayout>
     <LinearLayout
@@ -74,7 +74,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/linearLayout11"
                     android:background="#ff000000"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp">
                     <LinearLayout
@@ -88,7 +88,7 @@
                             android:minWidth="25px"
                             android:minHeight="25px"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_20sdp"
+                            android:layout_height="20dp"
                             android:id="@+id/linearLayout16" />
                         <LinearLayout
                             android:orientation="horizontal"
@@ -109,7 +109,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:id="@+id/iconPickup"
-                                    android:layout_margin="@dimen/_15sdp" />
+                                    android:layout_margin="15dp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:orientation="vertical"
@@ -123,8 +123,7 @@
                                     android:layout_height="0dp"
                                     android:id="@+id/lblPickupDate"
                                     android:layout_weight="1"
-                                    android:gravity="bottom"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:gravity="bottom" />
                                 <TextView
                                     android:text="Los Angeles International AirportLos Angeles International Airport"
                                     android:layout_width="match_parent"
@@ -133,8 +132,7 @@
                                     android:layout_weight="1"
                                     android:textColor="#ffffffff"
                                     android:ellipsize="end"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:singleLine="true" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -156,7 +154,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:id="@+id/iconDropoff"
-                                    android:layout_margin="@dimen/_15sdp" />
+                                    android:layout_margin="15dp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:orientation="vertical"
@@ -170,8 +168,7 @@
                                     android:layout_height="0dp"
                                     android:id="@+id/lblDropoffDate"
                                     android:layout_weight="1"
-                                    android:gravity="bottom"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:gravity="bottom" />
                                 <TextView
                                     android:text="Los Angeles International Airport"
                                     android:layout_width="match_parent"
@@ -180,8 +177,7 @@
                                     android:layout_weight="1"
                                     android:textColor="#ffffffff"
                                     android:ellipsize="end"
-                                    android:singleLine="true"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:singleLine="true" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
@@ -203,7 +199,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:id="@+id/iconVehicle"
-                                    android:layout_margin="@dimen/_15sdp" />
+                                    android:layout_margin="15dp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:orientation="vertical"
@@ -223,16 +219,14 @@
                                         android:id="@+id/lblRideType1"
                                         android:layout_weight="1"
                                         android:gravity="bottom"
-                                        android:textColor="#ffffffff"
-                                        android:textSize="@dimen/_12sdp" />
+                                        android:textColor="#ffffffff" />
                                     <TextView
                                         android:text="Los Angeles International Airport"
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:id="@+id/lblRideType2"
                                         android:layout_weight="1"
-                                        android:textColor="#ffffffff"
-                                        android:textSize="@dimen/_12sdp" />
+                                        android:textColor="#ffffffff" />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -243,7 +237,7 @@
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_height="40dp"
                     android:id="@+id/linearLayout6">
                     <LinearLayout
                         android:orientation="vertical"
@@ -277,8 +271,7 @@
                                 android:id="@+id/textView1"
                                 android:gravity="center"
                                 android:textColor="#ffffffff"
-                                android:textStyle="bold"
-                                android:textSize="@dimen/_12sdp" />
+                                android:textStyle="bold" />
                         </FrameLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -315,7 +308,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/linearLayout11"
                     android:background="#ff000000"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp">
                     <LinearLayout
@@ -329,7 +322,7 @@
                             android:minWidth="25px"
                             android:minHeight="25px"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_height="30dp"
                             android:id="@+id/linearLayout27" />
                         <LinearLayout
                             android:orientation="horizontal"
@@ -344,8 +337,7 @@
                                 android:id="@+id/textView2"
                                 android:textColor="#ffffffff"
                                 android:layout_weight="6"
-                                android:gravity="right"
-                                android:textSize="@dimen/_12sdp" />
+                                android:gravity="right" />
                             <TextView
                                 android:text="$92.00"
                                 android:layout_width="0dp"
@@ -353,8 +345,7 @@
                                 android:id="@+id/lblRideFee"
                                 android:textColor="#ffffffff"
                                 android:layout_weight="4"
-                                android:gravity="right"
-                                android:textSize="@dimen/_12sdp" />
+                                android:gravity="right" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -374,8 +365,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="3" />
                             <TextView
                                 android:text="$92.00"
                                 android:id="@+id/lblGasSurcharges"
@@ -383,8 +373,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="2" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -404,8 +393,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="3" />
                             <TextView
                                 android:text="$92.00"
                                 android:id="@+id/lblGratuity"
@@ -413,8 +401,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="2" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -434,8 +421,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="3" />
                             <TextView
                                 android:text="$92.00"
                                 android:id="@+id/lblMeetAndGreetFee"
@@ -443,8 +429,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="2" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -464,8 +449,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="3" />
                             <TextView
                                 android:text="$92.00"
                                 android:id="@+id/lblExtraBags"
@@ -473,8 +457,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:textSize="@dimen/_12sdp" />
+                                android:layout_weight="2" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -502,9 +485,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold" />
+                                android:layout_weight="3" />
                             <TextView
                                 android:text="$92.00"
                                 android:id="@+id/lblTotal"
@@ -512,9 +493,7 @@
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold" />
+                                android:layout_weight="2" />
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -528,7 +507,7 @@
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_height="40dp"
                     android:id="@+id/linearLayout6">
                     <LinearLayout
                         android:orientation="vertical"
@@ -562,8 +541,7 @@
                                 android:id="@+id/textView1"
                                 android:gravity="center"
                                 android:textColor="#ffffffff"
-                                android:textStyle="bold"
-                                android:textSize="@dimen/_12sdp" />
+                                android:textStyle="bold" />
                         </FrameLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -606,9 +584,8 @@
                     android:id="@+id/btn_GoToThankyou"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_8sdp"
-                    android:background="@drawable/my_button"
-                    android:textSize="@dimen/_12sdp" />
+                    android:layout_margin="8dp"
+                    android:background="@drawable/my_button" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"

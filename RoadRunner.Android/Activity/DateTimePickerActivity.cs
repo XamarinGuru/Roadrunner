@@ -16,7 +16,7 @@ using RoadRunner.Shared;
 namespace RoadRunner.Android
 {
 	[Activity(Label = "DateTimePickerActivity")]
-	public class DateTimePickerActivity : BaseActivity
+	public class DateTimePickerActivity : NavigationActivity
 	{
 		DatePicker m_datePicker;
 		TimePicker m_timePicker;

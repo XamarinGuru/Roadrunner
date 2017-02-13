@@ -95,7 +95,6 @@ namespace RoadRunnerNew.iOS
 				UIStoryboard sb = UIStoryboard.FromName ("MainStoryboard", null);
 				var pvc = (AddCreditCardViewController)sb.InstantiateViewController("AddCreditCardViewController");
 				pvc.fromWhere = "payment";
-				pvc.callback = LoadCreditCards;
 				NavigationController.PushViewController (pvc, true);
 			};
 
@@ -146,6 +145,10 @@ namespace RoadRunnerNew.iOS
 				var tt = (GetCreditCardDetailsNewForPhoneResponse) AppData.ParseResponse(Constant.GETCREDITCARDDETAILSNEWFORPHONE, result);
 				var listCreditCards = new List<KeyValuePair<object, string>>();
 				var listCreditCardImages = new List<KeyValuePair<object, object>>();
+
+				foreach(var card in  tt.CardList){
+					listCreditCards.Add(new KeyValuePair<object, string>(card.Id,card.CardNumber));
+				}
 
 				InvokeOnMainThread(() => { 
 					foreach(var card in  tt.CardList){

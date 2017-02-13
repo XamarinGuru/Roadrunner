@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "ThankYouActivity")]			
-	public class ThankYouActivity : BaseActivity
+	public class ThankYouActivity : NavigationActivity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -25,24 +25,23 @@ namespace RoadRunner.Android
 
 			GetConfirmText();
 
-			var btnShareFacebook = (ImageView)FindViewById(Resource.Id.btnShareFacebook);
-			btnShareFacebook.Click += (object sender, EventArgs e) =>
+			var btnFacebook = (ImageView)FindViewById(Resource.Id.btnFacebook);
+			btnFacebook.Click += (object sender, EventArgs e) =>
 			{
-				var uri = global::Android.Net.Uri.Parse("https://www.facebook.com/sharer/sharer.php?u=https%3A//www.rrshuttle.com/index.html");
-				var intent = new Intent(Intent.ActionView, uri);
-				StartActivity(intent);
+				//StartActivity(new Intent(this, typeof(AddPaymentActivity)));
+				//OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 			};
 
-			var btnShareLinkedin = (ImageView)FindViewById(Resource.Id.btnShareLinkedin);
-			btnShareLinkedin.Click += (object sender, EventArgs e) =>
+			var btnLinkedin = (ImageView)FindViewById(Resource.Id.btnLinkedin);
+			btnLinkedin.Click += (object sender, EventArgs e) =>
 			{
 				var uri = global::Android.Net.Uri.Parse("https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.rrshuttle.com&title=Roadrunner%20Shuttle%20and%20Limousine%20Service&summary=Check%20out%20my%20ride!&source=");
 				var intent = new Intent(Intent.ActionView, uri);
 				StartActivity(intent);
 			};
 
-			var btnShareGoogle = (ImageView)FindViewById(Resource.Id.btnShareGoogle);
-			btnShareGoogle.Click += (object sender, EventArgs e) =>
+			var btnGoogle = (ImageView)FindViewById(Resource.Id.btnGoogle);
+			btnGoogle.Click += (object sender, EventArgs e) =>
 			{
 				var uri = global::Android.Net.Uri.Parse("https://plus.google.com/share?url=https%3A//www.rrshuttle.com");
 				var intent = new Intent(Intent.ActionView, uri);

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Android.Support.V4.App;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -43,57 +43,57 @@ namespace RoadRunner.Android
 
 		private void sendEmail(object sender, View.TouchEventArgs e)
 		{
-			//if (e.Event.Action == MotionEventActions.Down)
-			//{
-			//	var emailTask = MessagingPlugin.EmailMessenger;
-			//	if (emailTask.CanSendEmail)
-			//	{
-			//		emailTask.SendEmail("support@rrshuttle.com", "roadrunner support team", "this is email");
-			//	}
-			//	else {
-			//		AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
-			//		alert.SetTitle("error");
-			//		alert.SetMessage("You can't email on emulator");
-			//		alert.SetPositiveButton("OK", (senderAlert, args) => { });
-			//		alert.Show();
-			//	}
-			//}
+			if (e.Event.Action == MotionEventActions.Down)
+			{
+				var emailTask = MessagingPlugin.EmailMessenger;
+				if (emailTask.CanSendEmail)
+				{
+					emailTask.SendEmail("support@rrshuttle.com", "roadrunner support team", "this is email");
+				}
+				else {
+					AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
+					alert.SetTitle("error");
+					alert.SetMessage("You can't email on emulator");
+					alert.SetPositiveButton("OK", (senderAlert, args) => { });
+					alert.Show();
+				}
+			}
 		}
 		private void callPhone(object sender, View.TouchEventArgs e)
 		{
-			//if (e.Event.Action == MotionEventActions.Down)
-			//{
-			//	var phoneCallTask = MessagingPlugin.PhoneDialer;
-			//	if (phoneCallTask.CanMakePhoneCall)
-			//	{
-			//		phoneCallTask.MakePhoneCall("8053898496", "Roadrunner Support");
-			//	}
-			//	else {
-			//		AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
-			//		alert.SetTitle("error");
-			//		alert.SetMessage("You can't email on emulator");
-			//		alert.SetPositiveButton("OK", (senderAlert, args) => { });
-			//		alert.Show();
-			//	}
-			//}
+			if (e.Event.Action == MotionEventActions.Down)
+			{
+				var phoneCallTask = MessagingPlugin.PhoneDialer;
+				if (phoneCallTask.CanMakePhoneCall)
+				{
+					phoneCallTask.MakePhoneCall("8053898496", "Roadrunner Support");
+				}
+				else {
+					AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
+					alert.SetTitle("error");
+					alert.SetMessage("You can't email on emulator");
+					alert.SetPositiveButton("OK", (senderAlert, args) => { });
+					alert.Show();
+				}
+			}
 		}
 		private void callFree(object sender, View.TouchEventArgs e)
 		{
-			//if (e.Event.Action == MotionEventActions.Down)
-			//{
-			//	var phoneCallTask = MessagingPlugin.PhoneDialer;
-			//	if (phoneCallTask.CanMakePhoneCall)
-			//	{
-			//		phoneCallTask.MakePhoneCall("8052477919", "Roadrunner Support");
-			//	}
-			//	else {
-			//		AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
-			//		alert.SetTitle("error");
-			//		alert.SetMessage("You can't email on emulator");
-			//		alert.SetPositiveButton("OK", (senderAlert, args) => { });
-			//		alert.Show();
-			//	}
-			//}
+			if (e.Event.Action == MotionEventActions.Down)
+			{
+				var phoneCallTask = MessagingPlugin.PhoneDialer;
+				if (phoneCallTask.CanMakePhoneCall)
+				{
+					phoneCallTask.MakePhoneCall("8052477919", "Roadrunner Support");
+				}
+				else {
+					AlertDialog.Builder alert = new AlertDialog.Builder(this.Activity);
+					alert.SetTitle("error");
+					alert.SetMessage("You can't email on emulator");
+					alert.SetPositiveButton("OK", (senderAlert, args) => { });
+					alert.Show();
+				}
+			}
 		}
 	}
 }

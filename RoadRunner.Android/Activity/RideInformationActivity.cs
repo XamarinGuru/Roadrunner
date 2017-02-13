@@ -18,7 +18,7 @@ using GalaSoft.MvvmLight.Helpers;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "RideInformationActivity")]			
-	public class RideInformationActivity : BaseActivity
+	public class RideInformationActivity : NavigationActivity
 	{
 		private static bool IsFirstTime = true;
 
@@ -46,7 +46,6 @@ namespace RoadRunner.Android
 
 			SetContentView(Resource.Layout.RideInformatioin);
 
-			AppSettings.currentActivity = this;
 			//pickup location
 			m_txtPickupLocation = (TextView)FindViewById(Resource.Id.txtPickupLocation);
 			m_txtPickupLocation.Touch += PopupPickupLocation;
@@ -117,15 +116,12 @@ namespace RoadRunner.Android
 			var btnBack = (ImageButton)FindViewById (Resource.Id.btn_back);
 			btnBack.Click += delegate(object sender , EventArgs e )
 			{
-				//OnBack();
-				var preActivity = new Intent(this, typeof(MainActivity));
-				StartActivity(preActivity);
-				OverridePendingTransition(Resource.Animation.fromRight, Resource.Animation.toLeft);
+				OnBack();
 			};
 
-			if (AppSettings.isBindingFirst)
+			if (IsFirstTime)
 			{
-				AppSettings.isBindingFirst = false;
+				IsFirstTime = false;
 				SetBindingsOnce();
 			}
 
@@ -546,17 +542,17 @@ namespace RoadRunner.Android
 
 							if (Facade.Instance.CurrentRide.IsPickUpLocationAirport)
 							{
-								AppSettings.currentActivity.StartActivity(new Intent(this, typeof(LocationPickupActivity)));
-								AppSettings.currentActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
+								StartActivity(new Intent(this, typeof(LocationPickupActivity)));
+								OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 							}
 							else if (Facade.Instance.CurrentRide.IsDropOffLocationAirport)
 							{
-								AppSettings.currentActivity.StartActivity(new Intent(this, typeof(LocationDropoffActivity)));
-								AppSettings.currentActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
+								StartActivity(new Intent(this, typeof(LocationDropoffActivity)));
+								OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 							}
 							else {
-								AppSettings.currentActivity.StartActivity(new Intent(this, typeof(LocationZipActivity)));
-								AppSettings.currentActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
+								StartActivity(new Intent(this, typeof(LocationZipActivity)));
+								OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 							}
 						}
 						else {
@@ -568,7 +564,10 @@ namespace RoadRunner.Android
 
 								var delimeter = System.Environment.NewLine + System.Environment.NewLine;
 								var message = String.Join(delimeter, Facade.Instance.CurrentRide.ValidaionError.Select(r => r.ErrorMessage));
-								AppSettings.currentActivity.ShowMessageBox(header, message);
+								RunOnUiThread(() =>
+								{
+									ShowMessageBox(header, message);
+								});
 							}
 						}
 					});

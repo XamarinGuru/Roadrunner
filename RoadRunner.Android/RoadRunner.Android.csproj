@@ -16,9 +16,6 @@
     <AssemblyName>RoadRunner.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,11 +25,8 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-<EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
-<AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
-<AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -40,8 +34,8 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +47,9 @@
     </Reference>
     <Reference Include="AndHUD">
       <HintPath>..\Components\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.5.6.2.0\lib\portable-net45+wp80+win8+wpa81\FluentValidation.dll</HintPath>
@@ -84,6 +81,12 @@
     <Reference Include="Facebook">
       <HintPath>..\Components\facebook-sdk-6.2.2\lib\android\Facebook.dll</HintPath>
     </Reference>
+    <Reference Include="GooglePlayServicesFroyoLib">
+      <HintPath>..\Components\googleplayservicesfroyo-12.0.5\lib\android\GooglePlayServicesFroyoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\Components\googleplayservicesfroyo-12.0.5\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Basement">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
     </Reference>
@@ -92,36 +95,6 @@
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Maps">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Location">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Location.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Plus">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
-    </Reference>
-    <Reference Include="Auth0Client.Android">
-      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Auth0Client.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Auth.Android">
-      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Xamarin.Auth.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="RoundedImageView">
-      <HintPath>..\Components\RoundedImageView-2.2.1\lib\android\RoundedImageView.dll</HintPath>
-    </Reference>
-    <Reference Include="Square.OkIO">
-      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
-    </Reference>
-    <Reference Include="Square.OkHttp">
-      <HintPath>..\packages\Square.OkHttp.2.4.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
-    </Reference>
-    <Reference Include="Square.Picasso">
-      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -156,10 +129,6 @@
     <Compile Include="Activity\SignUpActivity.cs" />
     <Compile Include="Activity\TermsActivity.cs" />
     <Compile Include="Activity\ForgotPasswordActivity.cs" />
-    <Compile Include="Adapter\MapMarkerAdapter.cs" />
-    <Compile Include="Utilities\MomentUtil.cs" />
-    <Compile Include="Activity\EditReservationActivity.cs" />
-    <Compile Include="Activity\CancelReservationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -168,6 +137,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
@@ -260,38 +230,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\my_button.axml" />
     <AndroidResource Include="Resources\drawable-mdpi\btnReadyForPickup.axml" />
     <AndroidResource Include="Resources\drawable-mdpi\btnCancelTrip.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\values\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw300dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw300dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw360dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw360dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw420dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw420dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw480dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw480dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw540dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw540dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw600dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw600dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw660dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw660dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw720dp\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-sw720dp\positive_sdps.xml" />
-    <AndroidResource Include="Resources\values-xlarge\negtive_sdps.xml" />
-    <AndroidResource Include="Resources\values-xlarge\positive_sdps.xml" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_mylocation.png" />
-    <AndroidResource Include="Resources\layout\item_mapMarker.axml" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_marker.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_map_bus.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_map_limo.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_map_shuttle.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_map_suv.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon_map_towncar.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\btnReadyForPickup_disable.axml" />
-    <AndroidResource Include="Resources\layout\EditReservation.axml" />
-    <AndroidResource Include="Resources\layout\CancelReservation.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets')" />
@@ -303,7 +241,6 @@
     <Folder Include="Utilities\" />
     <Folder Include="Fragment\" />
     <Folder Include="Resources\Anim\" />
-    <Folder Include="Resources\style\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="AndHUD">
@@ -326,20 +263,12 @@
       <Version>6.2.2</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplayservicesfroyo">
+      <Version>12.0.5</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
     <XamarinComponentReference Include="googleplayservices-maps">
       <Version>29.0.0.2</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="googleplayservices-plus">
-      <Version>29.0.0.2</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="Auth0Client">
-      <Version>0.5.0</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="RoundedImageView">
-      <Version>2.2.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

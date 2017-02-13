@@ -56,7 +56,7 @@ namespace RoadRunnerNew.iOS
 		{
 			if (indexPath.Row == response.CardList.Count) {
 				BillAddCell cell = tableView.DequeueReusableCell("BillAddCell") as BillAddCell;
-				cell.SetCell (_NavigationController, LoadData);
+				cell.SetCell (_NavigationController);
 				cell.BackgroundColor = cell.ContentView.BackgroundColor;
 				return cell;
 			} else {

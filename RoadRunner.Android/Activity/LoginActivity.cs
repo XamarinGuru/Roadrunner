@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Globalization;
 
 using Android.App;
 using Android.Content;
@@ -12,10 +9,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
-using Auth0.SDK;
-
-using Newtonsoft.Json.Linq;
 
 using RoadRunner.Shared;
 using RoadRunner.Shared.Classes;
@@ -26,20 +19,12 @@ namespace RoadRunner.Android
 	[Activity (Label = "RoadRunner.Android", MainLauncher = true, Theme = "@android:style/Theme.NoTitleBar")]
 	public class LoginActivity : BaseActivity
 	{
-		private Auth0.SDK.Auth0Client client = new Auth0.SDK.Auth0Client(
-			"erlend.eu.auth0.com",
-			"LnLnPaFL5cKqKJHEJaQeMwA7ouSsC52t");
-
-		private MD5 md5Hash;
-		
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Login);
-
-			md5Hash = MD5.Create();
 
 			Xamarin.Insights.Initialize ("37f8347b1aa3979ce023e220274aa739d6ea73ba", Application.Context);
 
@@ -49,14 +34,11 @@ namespace RoadRunner.Android
 				}
 			};
 
-			var username = FindViewById<EditText>(Resource.Id.login_username);
-			var password = FindViewById<EditText>(Resource.Id.login_password);
-
 			#if DEBUG
+			var username = FindViewById<EditText> (Resource.Id.login_username);
+			var password = FindViewById<EditText> (Resource.Id.login_password);
 			username.Text = "test1@test.com";
 			password.Text = "test1234";
-			//username.Text = "newapiuser@mail.com";
-			//password.Text = "newapi";
 			#endif
 
 			//signup
@@ -66,13 +48,6 @@ namespace RoadRunner.Android
 				StartActivity(new Intent(this, typeof(SignUpActivity)));
 				OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 			};
-
-			if (!String.IsNullOrEmpty(AppSettings.UserLogin) && !String.IsNullOrEmpty(AppSettings.UserPassword))
-			{
-				username.Text = AppSettings.UserLogin;
-				password.Text = AppSettings.UserPassword;
-				loginProcess();
-			}
 
 			//login with email, pw 
 			var btnLogin = FindViewById<ImageButton> (Resource.Id.btnLogin);
@@ -92,81 +67,25 @@ namespace RoadRunner.Android
 			var btnFacebook = FindViewById<ImageButton>(Resource.Id.btnFacebook);
 			btnFacebook.Click += delegate
 			{
-				loginWithSocial("facebook");
+				loginProcess();
 			};
 
 			//login with linkedin
 			var btnLinkedin = FindViewById<ImageButton>(Resource.Id.btnLinkedin);
 			btnLinkedin.Click += delegate
 			{
-				loginWithSocial("linkedin");
+				loginProcess();
 			};
 
 			//login with google
 			var btnGoogle = FindViewById<ImageButton>(Resource.Id.btnGoogle);
 			btnGoogle.Click += delegate
 			{
-				loginWithSocial("google-oauth2");
+				loginProcess();
 			};
 		}
 
-		private async void loginWithSocial(string type)
-		{
-			ShowLoadingView("Getting some user data...");
-
-			try
-			{
-				var user = await this.client.LoginAsync(this, type);
-				this.ShowResult(user);
-				HideLoadingView();
-			}
-			catch (AggregateException e)
-			{
-				HideLoadingView();
-				ShowMessageBox("Oops!", e.Flatten().Message);
-			}
-			catch (Exception e)
-			{
-				HideLoadingView();
-				ShowMessageBox("Oops!", e.Message);
-			}
-		}
-
-		private void ShowResult(Auth0User user)
-		{
-			var userInfo = user.Profile;
-
-			AppSettings.LoginType = (int)LoginType.Facebook;
-			AppSettings.UserType = "";
-			AppSettings.UserFirstName = userInfo["given_name"].ToString();
-			AppSettings.UserLastName = userInfo["family_name"].ToString();
-			AppSettings.UserEmail = userInfo["email"].ToString();
-
-			AppSettings.UserPhoto = userInfo["picture"].ToString();
-
-			AppSettings.UserToken = GetMd5Hash(md5Hash, userInfo["email"].ToString());
-
-			////we got all the data we need at this point, FB login successful
-			UserTrackingReporter.TrackUser(Constant.CATEGORY_LOGIN, "Facebook login completed");
-
-			bool registerSuccessful = false;
-
-			Task runSync = Task.Factory.StartNew(async () =>
-			{
-				registerSuccessful = await RegisterUser();
-			}).Unwrap();
-			runSync.Wait();
-
-			if (!registerSuccessful)
-			{
-				GoToCreateAccountScreen();
-				return;
-			}
-
-			ShowHomeScreen();
-		}
-
-		private async void loginProcess()
+		private void loginProcess()
 		{
 			var username = FindViewById<EditText> (Resource.Id.login_username);
 			var password = FindViewById<EditText> (Resource.Id.login_password);
@@ -200,7 +119,7 @@ namespace RoadRunner.Android
 
 				ShowLoadingView("Signing in...");
 
-				//Task runSync = Task.Factory.StartNew(async () => { 
+				Task runSync = Task.Factory.StartNew(async () => { 
 					result = await AppData.ApiCall(Constant.CHECKLOGINFORANDROID, dic);
 					var tt = (CheckLoginForAndroidResponse) AppData.ParseResponse(Constant.CHECKLOGINFORANDROID, result);
 
@@ -225,7 +144,7 @@ namespace RoadRunner.Android
 
 					ShowHomeScreen();
 
-				//} );
+				} ).Unwrap();
 				//runSync.Wait();
 			}
 			catch (Exception ex)
@@ -238,115 +157,15 @@ namespace RoadRunner.Android
 				CrashReporter.Report(ex);
 				return;
 			}
+			finally{
+				//HideLoadingView();
+			}
 		}
 
 		private void ShowHomeScreen()
 		{
 			var mainActivity = new Intent(this, typeof(MainActivity));
 			StartActivity(mainActivity);
-		}
-
-		private void GoToCreateAccountScreen()
-		{
-			StartActivity(new Intent(this, typeof(SignUpActivity)));
-			OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
-		}
-
-		private async Task<bool> RegisterUser()
-		{
-			UserTrackingReporter.TrackUser(Constant.CATEGORY_LOGIN, "Checking if user is registered");
-
-			var token = GetMd5Hash(md5Hash, AppSettings.UserEmail);
-
-			var dic = new Dictionary<String, String>
-			{
-				{Constant.CHECKLOGINFORANDROID_USERNAME, AppSettings.UserEmail},
-				{Constant.CHECKLOGINFORANDROID_PASSWORD, ""},
-				{Constant.CHECKLOGINFORANDROID_TYPE, AppSettings.LoginType.ToString()},
-				{Constant.CHECKLOGINFORANDROID_TOKEN, token}
-			};
-
-			string result = String.Empty;
-			try
-			{
-				result = await AppData.ApiCall(Constant.CHECKLOGINFORANDROID, dic);
-				var tt = (CheckLoginForAndroidResponse)AppData.ParseResponse(Constant.CHECKLOGINFORANDROID, result);
-
-				if (tt.Result.ToLower().Contains("error") || tt.Result.ToLower().Contains("fail") || tt.Result.ToLower().Contains("failed"))
-				{
-
-					return false;
-
-				}
-				else {
-
-					AppSettings.UserID = tt.Customerid;
-
-					dic = new Dictionary<String, String>
-					{
-						{Constant.GET_MY_PROFILE_FOR_ANDROID_API_CUSTOMERID, AppSettings.UserID}
-					};
-
-					result = String.Empty;
-					try
-					{
-						result = await AppData.ApiCall(Constant.GET_MY_PROFILE_FOR_ANDROID_API, dic);
-						var tt1 = (GetMyProfileForAndroidResponse)AppData.ParseResponse(Constant.GET_MY_PROFILE_FOR_ANDROID_API, result);
-
-						if (tt.Result.ToLower().Contains("error") || tt.Result.ToLower().Contains("fail") || tt.Result.ToLower().Contains("failed"))
-						{
-							ShowMessageBox("Login Failed", "The social network login failed for your account");
-							return false;
-						}
-						AppSettings.UserEmail = tt1.Email;
-						AppSettings.UserFirstName = tt1.FirstName;
-						AppSettings.UserLastName = tt1.LastName;
-						AppSettings.UserPhone = tt1.Phone;
-						AppSettings.UserPassword = tt1.Password;
-						AppSettings.IsSMS = bool.Parse(tt1.IsSMS);
-
-						return true;
-
-					}
-					catch (Exception e)
-					{
-					}
-
-					return true;
-				}
-			}
-			catch (Exception e)
-			{
-			}
-			return false;
-		}
-
-		private string GetMd5Hash(MD5 md5Hash, string input)
-		{
-			byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-			StringBuilder sBuilder = new StringBuilder();
-
-			for (int i = 0; i < data.Length; i++)
-			{
-				sBuilder.Append(data[i].ToString("x2"));
-			}
-
-			return sBuilder.ToString();
-		}
-
-		private bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
-		{
-			string hashOfInput = GetMd5Hash(md5Hash, input);
-			StringComparer comparer = StringComparer.OrdinalIgnoreCase;
-
-			if (0 == comparer.Compare(hashOfInput, hash))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
 		}
 	}
 }

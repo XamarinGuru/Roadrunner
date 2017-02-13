@@ -258,6 +258,7 @@
     <Compile Include="ViewControllers\FlightInformationViewController2.designer.cs">
       <DependentUpon>FlightInformationViewController2.cs</DependentUpon>
     </Compile>
+    <InterfaceDefinition Include="View\MapMarkerView.xib" />
     <Compile Include="View\MapMarkerView.cs" />
     <Compile Include="View\MapMarkerView.designer.cs">
       <DependentUpon>MapMarkerView.cs</DependentUpon>
@@ -706,17 +707,6 @@
     <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-32px.png" />
     <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-64px.png" />
     <ImageAsset Include="Resources\Images.xcassets\fa-cc-mastercard.imageset\mastercard-curved-128px.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 29x29.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 40x40.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 50x50.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 80x80.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 180x180.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 72x72.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 58x58.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 57x57.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 120x120.png" />
-    <ImageAsset Include="Resources\Images.xcassets\IconShare.imageset\Ride Share Slider 167x167.png" />
   </ItemGroup>
   <Target Name="_CompileITunesMetadata" DependsOnTargets="_DetectSdkLocations;_DetectAppManifest;_GenerateBundleName;_CompileAppManifest">
     <Message Text="Skipping CompileITunesMetadata task to prevent inclusion of iTunesMetadata.plist in the IPA" />
@@ -813,9 +803,5 @@
     <Folder Include="Resources\Images.xcassets\IconLinkedin.imageset\" />
     <Folder Include="Resources\Images.xcassets\powered_by_google_on_white.imageset\" />
     <Folder Include="Resources\Images.xcassets\map_pin.imageset\" />
-    <Folder Include="Resources\Images.xcassets\IconShare.imageset\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="View\MapMarkerView.xib" />
   </ItemGroup>
 </Project>

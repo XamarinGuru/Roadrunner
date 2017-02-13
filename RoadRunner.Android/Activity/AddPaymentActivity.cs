@@ -19,7 +19,7 @@ using Card.IO;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "AddPaymentActivity")]			
-	public class AddPaymentActivity : BaseActivity
+	public class AddPaymentActivity : NavigationActivity
 	{
 		private EditText edtCardData;
 		private ImageView cardImage;
@@ -135,7 +135,7 @@ namespace RoadRunner.Android
 			{
 				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCNAME, edtCardName.Text },
 				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCNUM, creditCardInfo.CardNumber},
-				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCTYPE, string.Format("{0}",(int)crditCardType)},
+				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCTYPE, crditCardType.ToString()},
 				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CID, creditCardInfo.Cvv },
 				{Constant.INSERTCREDITCARDDETAILSFORPHONE_CUSTOMERID, AppSettings.UserID},
 				{Constant.INSERTCREDITCARDDETAILSFORPHONE_EXPDATE, creditCardInfo.ExpiryMonth + creditCardInfo.ExpiryYear.ToString ().Substring (2, 2) },
@@ -175,8 +175,8 @@ namespace RoadRunner.Android
 				if (tt.Result == "Success" || tt.Result == "Sucess")
 				{
 					string fromWhere = Intent.GetStringExtra("fromWhere") ?? "any";
-					//OnBack();
-				if (fromWhere == string.Empty) return;
+					OnBack();
+					//if (fromWhere == string.Empty) return;
 
 					if (fromWhere == "signup")
 					{

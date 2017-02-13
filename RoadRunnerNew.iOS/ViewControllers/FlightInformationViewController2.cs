@@ -107,5 +107,24 @@ namespace RoadRunnerNew.iOS
 				);
 		}
 
+		private async Task<List<GetAirlineResponseItem>> GetAirline()
+		{
+			List<GetAirlineResponseItem> list = null;
+			try {
+				UserTrackingReporter.TrackUser (Constant.CATEGORY_SCHEDULE_RIDE, "Getting airlines");
+
+				var dic = new Dictionary<String, String> { { Constant.GETAIRLINE_PREFIX, "" } };
+				var result = await AppData.ApiCall (Constant.GETAIRLINE, dic);
+				var tt = (GetAirlineResponse)AppData.ParseResponse (Constant.GETAIRLINE, result);
+				list = tt.List;
+				UserTrackingReporter.TrackUser (Constant.CATEGORY_SCHEDULE_RIDE, "Airlines retrieved successfully");
+			} catch (Exception ex) {
+				HideLoadingView ();
+				ShowMessageBox ("Error", "An error occurred getting airlines. \n\nError: " + ex.Message);
+				CrashReporter.Report (ex);
+			}
+			return list ?? new List<GetAirlineResponseItem> ();
+		}
+
 	}
 }

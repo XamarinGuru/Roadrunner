@@ -9,7 +9,6 @@ namespace RoadRunnerNew.iOS
 	public partial class BillAddCell : UITableViewCell
 	{
 		private UINavigationController _NavigationController;
-		private Action _callback = null;
 		public static readonly NSString Key = new NSString ("BillAddCell");
 		public static readonly UINib Nib;
 
@@ -22,10 +21,10 @@ namespace RoadRunnerNew.iOS
 		{
 		}
 
-		public void SetCell(UINavigationController NavigationController, Action callback)
+		public void SetCell(UINavigationController NavigationController)
 		{
 			_NavigationController = NavigationController;
-			_callback = callback;
+
 			btnAddBill.SetCustomButton ();
 			btnAddBill.TouchUpInside -= AddCreditCard;
 			btnAddBill.TouchUpInside += AddCreditCard;
@@ -35,7 +34,6 @@ namespace RoadRunnerNew.iOS
 			UIStoryboard sb = UIStoryboard.FromName ("MainStoryboard", null);
 			AddCreditCardViewController pvc = (AddCreditCardViewController)sb.InstantiateViewController ("AddCreditCardViewController");
 			pvc.fromWhere = "bill";
-			pvc.callback = _callback;
 			_NavigationController.PushViewController (pvc, true);
 		}
 	}

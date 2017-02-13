@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-using Android.Support.V4.App;
+using Android.App;
 using Android.Views;
 using Android.OS;
 using Android.Widget;

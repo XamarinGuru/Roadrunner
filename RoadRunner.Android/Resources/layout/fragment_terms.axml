@@ -38,7 +38,7 @@
                     android:id="@+id/txtHeader"
                     android:gravity="center_horizontal"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_17sdp"
+                    android:textSize="17dp"
                     android:textColor="#ffffffff" />
                 <TextView
                     android:text="Online Reservations must be booked 24 ours in advance. Please note"
@@ -46,7 +46,7 @@
                     android:layout_height="0dp"
                     android:id="@+id/txtBody"
                     android:gravity="center_horizontal"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="16dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

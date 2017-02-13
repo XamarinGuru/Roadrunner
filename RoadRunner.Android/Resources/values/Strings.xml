@@ -32,7 +32,5 @@
 
 	<string name="spinner_passengers">select number</string> 
 
-	  <string name="map_not_ready">Map is not ready yet</string>
 
-	<string name="server_client_id">624483098115-g4d2d5dpq5kg5vnsetivq4dln7i0cns2.apps.googleusercontent.com</string>
 </resources>

@@ -2,17 +2,11 @@
 using Android.App;
 using Android.Content;
 using Android.Preferences;
-using RoadRunner.Shared;
-using FragmentActivity = Android.Support.V4.App.FragmentActivity;
+
 namespace RoadRunner.Android
 {
 	public static class AppSettings
 	{
-		public static GetMyBookedReservationsResponseReservation selectedTrip;
-		public static BaseActivity currentActivity;
-
-		public static bool isBindingFirst = true;
-
 		private static ISharedPreferences _appSettings = Application.Context.GetSharedPreferences ("App_settings", FileCreationMode.Private);
 
 		private const string userTokenKey = "UserToken";
@@ -98,7 +92,7 @@ namespace RoadRunner.Android
 			set 
 			{
 				ISharedPreferencesEditor editor = _appSettings.Edit();
-				editor.PutString(userEmailKey, value);
+				editor.PutString(value, userEmailKey);
 				editor.Apply();
 			}
 		}

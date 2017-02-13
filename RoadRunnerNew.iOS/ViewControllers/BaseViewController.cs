@@ -62,6 +62,26 @@ namespace RoadRunnerNew.iOS
 			return true;
 		}
 
+		protected UIImage LoadImageSync(string imageUrl)
+		{
+			byte[] contents = new byte[0];
+
+			Task runSync = Task.Factory.StartNew(async () => {
+				var httpClient = new HttpClient();
+				contents = await httpClient.GetByteArrayAsync (imageUrl);
+			}).Unwrap();
+			runSync.Wait();
+
+			return UIImage.LoadFromData (NSData.FromArray (contents));
+		}
+
+		protected async Task<UIImage> LoadImage (string imageUrl)
+		{
+			var httpClient = new HttpClient();
+			var contents = await httpClient.GetByteArrayAsync (imageUrl);
+			return UIImage.LoadFromData (NSData.FromArray (contents));
+		}
+
 		protected static DateTime NSDateToDateTime (NSDate date)
 		{
 			DateTime reference = TimeZone.CurrentTimeZone.ToLocalTime (new DateTime (2001, 1, 1, 0, 0, 0));

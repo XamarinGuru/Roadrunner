@@ -18,7 +18,7 @@ using RoadRunner.Shared;
 namespace RoadRunner.Android
 {
 	[Activity(Label = "LocationPickupActivity")]
-	public class LocationPickupActivity : BaseActivity
+	public class LocationPickupActivity : NavigationActivity
 	{
 		const int TIME_DIALOG_ID = 0;
 
@@ -40,7 +40,6 @@ namespace RoadRunner.Android
 
 			SetContentView(Resource.Layout.LocationPickup);
 
-			AppSettings.currentActivity = this;
 			//pickup location
 			m_txtPickupLocation = (TextView)FindViewById(Resource.Id.txtPickupLocation);
 			m_txtPickupLocation.Text = Facade.Instance.CurrentRide.PickUpLocation;
@@ -199,8 +198,8 @@ namespace RoadRunner.Android
 					{
 						if (Facade.Instance.CurrentRide.CanGoToThePaymentInformation)
 						{
-							AppSettings.currentActivity.StartActivity(new Intent(this, typeof(RidePaymentActivity)));
-							AppSettings.currentActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
+							StartActivity(new Intent(this, typeof(RidePaymentActivity)));
+							OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 						}
 						else {
 							if (Facade.Instance.CurrentRide.ValidaionError != null && Facade.Instance.CurrentRide.ValidaionError.Count > 0)
@@ -211,7 +210,11 @@ namespace RoadRunner.Android
 
 								var delimeter = System.Environment.NewLine + System.Environment.NewLine;
 								var message = String.Join(delimeter, Facade.Instance.CurrentRide.ValidaionError.Select(r => r.ErrorMessage));
-								AppSettings.currentActivity.ShowMessageBox(header, message);
+
+								RunOnUiThread(() =>
+								{
+									ShowMessageBox(header, message);
+								});
 							}
 						}
 					}

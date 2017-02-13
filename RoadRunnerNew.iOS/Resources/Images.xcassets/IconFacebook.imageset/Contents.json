@@ -1,0 +1,80 @@
+{
+  "images": [
+    {
+      "idiom": "universal"
+    },
+    {
+      "filename": "Facebook-29x29.png",
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "Facebook-58x58.png",
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "Facebook-120x120.png",
+      "scale": "3x",
+      "idiom": "universal"
+    },
+    {
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Facebook-40x40.png",
+      "scale": "1x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Facebook-50x50.png",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Facebook-80x80.png",
+      "subtype": "retina4",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Facebook-100x100.png",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "idiom": "ipad"
+    },
+    {
+      "filename": "Facebook-144x144.png",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "Facebook-180x180.png",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "idiom": "watch"
+    },
+    {
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{130,145}",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{146,165}",
+      "scale": "2x",
+      "idiom": "watch"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

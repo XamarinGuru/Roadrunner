@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using Android.Support.V4.App;
 using Android.App;
 using Android.OS;
 using Android.Views;
@@ -12,8 +11,6 @@ using Android.Widget;
 using RoadRunner.Shared;
 using RoadRunner.Shared.Classes;
 
-using Fragment = Android.Support.V4.App.Fragment;
-using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 namespace RoadRunner.Android
 {
@@ -67,17 +64,17 @@ namespace RoadRunner.Android
 
 		private void LongClickForDelete(object sender, AdapterView.ItemLongClickEventArgs e)
 		{
-			//var alert = new AlertDialog.Builder (this.Activity);
+			var alert = new AlertDialog.Builder (this.Activity);
 
-			//alert.SetTitle ("Are you sure?");
-			//alert.SetMessage ("Are you sure to delete this card?");
-			//alert.SetPositiveButton ("OK", (senderAlert, args) => {
-			//	deleteCard(e.Position);
-			//} );
+			alert.SetTitle ("Are you sure?");
+			alert.SetMessage ("Are you sure to delete this card?");
+			alert.SetPositiveButton ("OK", (senderAlert, args) => {
+				deleteCard(e.Position);
+			} );
 
-			//this.Activity.RunOnUiThread (() => {
-			//	alert.Show();
-			//} );
+			this.Activity.RunOnUiThread (() => {
+				alert.Show();
+			} );
 		}
 
 		public async void deleteCard(int index)

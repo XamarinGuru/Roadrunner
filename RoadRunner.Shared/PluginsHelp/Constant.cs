@@ -18,8 +18,8 @@
             "RESET PASSWORD", "LOGOUT"
 		};
 
-		//public const string BASEURL = @"http://sandbox.gorrshuttle.com/rr09.asmx/";
-		public const string BASEURL = @"http://sandbox.rrshuttle.com/rr09.asmx/";
+		public const string BASEURL = @"http://sandbox.gorrshuttle.com/rr09.asmx/";
+		//public const string BASEURL = @"http://sandbox.rrshuttle.com/rr09.asmx/";
 
 
 		public const string AIRPORTCODEURL = @"http://airportcode.riobard.com/search?q={0}&fmt=JSON";

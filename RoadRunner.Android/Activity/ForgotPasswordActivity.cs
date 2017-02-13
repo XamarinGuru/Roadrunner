@@ -12,7 +12,7 @@ using RoadRunner.Shared.Classes;
 namespace RoadRunner.Android
 {
 	[Activity(Label = "ForgotPasswordActivity")]
-	public class ForgotPasswordActivity : BaseActivity
+	public class ForgotPasswordActivity : NavigationActivity
 	{
 		private static bool IsFirstTime = true;
 

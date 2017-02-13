@@ -7,13 +7,6 @@ using RoadRunner.Shared;
 using System.Threading.Tasks;
 using BigTed;
 using CoreGraphics;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using FluentValidation;
-using FluentValidation.Results;
-using GalaSoft.MvvmLight.Command;
-using System.Linq;
-using FluentValidation.Validators;
 
 namespace RoadRunnerNew.iOS
 {
@@ -101,15 +94,6 @@ namespace RoadRunnerNew.iOS
 				if (!String.IsNullOrEmpty (placeId)) {
 					var data = await AppData.GetPlaceDetails (placeId);
 
-					var zipCode = data.result.address_components.SingleOrDefault(r => r.types.Contains("postal_code"));
-
-					if (zipCode == null)
-					{
-						HideLoadingView();
-						ShowMessageBox("Invalid pickup location", "The location you picked, doesn't have a valid zip code. Please choose another pick-up location.", "OK", null, null);
-						return;
-					}
-
 					InvokeOnMainThread (() => {
 						if (IsPickUpLocation) {
 							Facade.Instance.CurrentRide.PickUpData = data;
@@ -151,8 +135,6 @@ namespace RoadRunnerNew.iOS
 			var lResult = LocationHelper.GetLocationResult ();
 			var data = await AppData.GetPlaceAutocomplete (searchString, lResult.Latitude, lResult.Longitude);
 			var currentPredictions = data.predictions;
-
-
 
 			return currentPredictions;
 		}
@@ -232,21 +214,19 @@ namespace RoadRunnerNew.iOS
 		// Show the alert view
 		protected void ShowMessageBox(string title, string message, string cancelButton, string[] otherButtons, Action successHandler)
 		{
-			InvokeOnMainThread(() => { 
-				var alertView = new UIAlertView(title, message, null, cancelButton, otherButtons);
-				alertView.Clicked += (sender, e) =>
+			var alertView = new UIAlertView(title, message, null, cancelButton, otherButtons);
+			alertView.Clicked += (sender, e) =>
+			{
+				if (e.ButtonIndex == 0)
 				{
-					if (e.ButtonIndex == 0)
-					{
-						return;
-					}
-					if (successHandler != null)
-					{
-						successHandler();
-					}
-				};
-				alertView.Show();
-			});
+					return;
+				}
+				if (successHandler != null)
+				{
+					successHandler();
+				}
+			};
+			alertView.Show();
 		}
 
 		protected bool TextFieldShouldReturn(UITextField textField)

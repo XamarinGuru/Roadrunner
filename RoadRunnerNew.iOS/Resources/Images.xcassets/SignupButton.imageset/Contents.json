@@ -1,0 +1,80 @@
+{
+  "images": [
+    {
+      "idiom": "universal"
+    },
+    {
+      "filename": "Create-Account-Button1.png",
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "Create-Account-Button2.png",
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "Create-Account-Button 3.png",
+      "scale": "3x",
+      "idiom": "universal"
+    },
+    {
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Create-Account-Button1.png",
+      "scale": "1x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Create-Account-Button2.png",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Create-Account-Button4.png",
+      "subtype": "retina4",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "Create-Account-Button4.png",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "idiom": "ipad"
+    },
+    {
+      "filename": "Create-Account-Button5.png",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "Create-Account-Button6.png",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "idiom": "watch"
+    },
+    {
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{130,145}",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{146,165}",
+      "scale": "2x",
+      "idiom": "watch"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

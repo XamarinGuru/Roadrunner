@@ -8,18 +8,18 @@
         android:id="@+id/titleBarLinearLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
+        android:layout_height="55dp"
         android:background="#ff3c5a7e">
         <ImageButton
             android:id="@+id/btn_back"
             android:scaleType="fitXY"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_width="@dimen/_18sdp"
+            android:layout_height="30dp"
+            android:layout_width="18dp"
             android:padding="0dp"
             android:requiresFadingEdge="none"
             android:fadingEdge="none"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/icon_back" />
         <TextView
             android:id="@+id/v_book_ride"
@@ -30,16 +30,16 @@
             android:layout_gravity="center"
             android:clickable="true"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="18dp"
             android:layout_centerHorizontal="true" />
         <ImageView
             android:src="@drawable/icon_mark"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
             android:id="@+id/imageView1"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
             android:scaleType="fitXY" />
     </RelativeLayout>
     <LinearLayout
@@ -118,7 +118,7 @@
                                 android:id="@+id/linearLayout19"
                                 android:layout_weight="1"
                                 android:background="#ffe6e6e6"
-                                android:layout_margin="@dimen/_5sdp">
+                                android:layout_margin="5dp">
                                 <LinearLayout
                                     android:orientation="horizontal"
                                     android:minWidth="25px"
@@ -132,7 +132,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:id="@+id/cardImage"
-                                        android:layout_margin="@dimen/_3sdp" />
+                                        android:layout_margin="3dp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -149,7 +149,7 @@
                                         android:id="@+id/edtCardData"
                                         android:gravity="center_vertical"
                                         android:hint="Credit Card Data"
-                                        android:textSize="@dimen/_12sdp"
+                                        android:textSize="12dp"
                                         tools:visibility="visible"
                                         android:textColor="#ff000000" />
                                 </LinearLayout>
@@ -162,7 +162,7 @@
                                 android:layout_height="0dp"
                                 android:id="@+id/linearLayout26"
                                 android:layout_weight="1"
-                                android:layout_margin="@dimen/_5sdp">
+                                android:layout_margin="5dp">
                                 <LinearLayout
                                     android:orientation="horizontal"
                                     android:layout_width="0dp"
@@ -170,7 +170,7 @@
                                     android:id="@+id/linearLayout27"
                                     android:background="#ffe6e6e6"
                                     android:layout_weight="1"
-                                    android:layout_marginRight="@dimen/_5sdp">
+                                    android:layout_marginRight="5dp">
                                     <LinearLayout
                                         android:orientation="horizontal"
                                         android:minWidth="25px"
@@ -184,7 +184,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:id="@+id/imageView2"
-                                            android:layout_margin="@dimen/_3sdp" />
+                                            android:layout_margin="3dp" />
                                     </LinearLayout>
                                     <LinearLayout
                                         android:orientation="horizontal"
@@ -201,7 +201,7 @@
                                             android:id="@+id/edtCCV"
                                             android:hint="CCV"
                                             android:gravity="center_vertical"
-                                            android:textSize="@dimen/_12sdp"
+                                            android:textSize="12dp"
                                             android:textColor="#ff000000" />
                                     </LinearLayout>
                                 </LinearLayout>
@@ -212,7 +212,7 @@
                                     android:id="@+id/linearLayout28"
                                     android:background="#ffe6e6e6"
                                     android:layout_weight="1"
-                                    android:layout_marginLeft="@dimen/_5sdp">
+                                    android:layout_marginLeft="5dp">
                                     <LinearLayout
                                         android:orientation="horizontal"
                                         android:minWidth="25px"
@@ -226,7 +226,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:id="@+id/imageView3"
-                                            android:layout_margin="@dimen/_4sdp" />
+                                            android:layout_margin="4dp" />
                                     </LinearLayout>
                                     <LinearLayout
                                         android:orientation="horizontal"
@@ -243,7 +243,7 @@
                                             android:id="@+id/edtZIP"
                                             android:hint="ZIP Code"
                                             android:gravity="center_vertical"
-                                            android:textSize="@dimen/_12sdp"
+                                            android:textSize="12dp"
                                             android:textColor="#ff000000" />
                                     </LinearLayout>
                                 </LinearLayout>
@@ -257,7 +257,7 @@
                                 android:id="@+id/linearLayout21"
                                 android:layout_weight="1"
                                 android:background="#ffe6e6e6"
-                                android:layout_margin="@dimen/_5sdp">
+                                android:layout_margin="5dp">
                                 <LinearLayout
                                     android:orientation="horizontal"
                                     android:minWidth="25px"
@@ -271,7 +271,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:id="@+id/imageView4"
-                                        android:layout_margin="@dimen/_5sdp" />
+                                        android:layout_margin="5dp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -288,7 +288,7 @@
                                         android:id="@+id/edtCardName"
                                         android:hint="Name on Card"
                                         android:gravity="center_vertical"
-                                        android:textSize="@dimen/_12sdp"
+                                        android:textSize="12dp"
                                         android:textColor="#ff000000" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -301,7 +301,7 @@
                                 android:id="@+id/linearLayout22"
                                 android:layout_weight="1"
                                 android:background="#ffe6e6e6"
-                                android:layout_margin="@dimen/_5sdp">
+                                android:layout_margin="5dp">
                                 <LinearLayout
                                     android:orientation="horizontal"
                                     android:minWidth="25px"
@@ -315,7 +315,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:id="@+id/imageView5"
-                                        android:layout_margin="@dimen/_6sdp" />
+                                        android:layout_margin="6dp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -332,7 +332,7 @@
                                         android:id="@+id/edtCardDate"
                                         android:hint="MM / DD"
                                         android:gravity="center_vertical"
-                                        android:textSize="@dimen/_12sdp"
+                                        android:textSize="12dp"
                                         android:textColor="#ff000000" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -349,8 +349,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:id="@+id/btnSubmit"
-                                    android:layout_margin="@dimen/_5sdp"
-                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_margin="5dp"
+                                    android:textSize="15dp"
                                     android:background="@drawable/my_button" />
                             </LinearLayout>
                             <LinearLayout
@@ -366,25 +366,25 @@
                                     android:minWidth="25px"
                                     android:minHeight="25px"
                                     android:layout_width="0dp"
-                                    android:layout_height="@dimen/_3sdp"
+                                    android:layout_height="3dp"
                                     android:id="@+id/linearLayout39"
                                     android:background="#ffc1c1c1"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:layout_marginLeft="@dimen/_50sdp"
-                                    android:layout_marginRight="@dimen/_50sdp" />
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginRight="50dp" />
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:minWidth="25px"
                                     android:minHeight="25px"
                                     android:layout_width="0dp"
-                                    android:layout_height="@dimen/_3sdp"
+                                    android:layout_height="3dp"
                                     android:id="@+id/linearLayout40"
                                     android:layout_weight="1"
                                     android:background="#ffc1c1c1"
                                     android:layout_gravity="center"
-                                    android:layout_marginLeft="@dimen/_50sdp"
-                                    android:layout_marginRight="@dimen/_50sdp" />
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginRight="50dp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -399,8 +399,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:id="@+id/btnScanCard"
-                                    android:layout_margin="@dimen/_5sdp"
-                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_margin="5dp"
+                                    android:textSize="15dp"
                                     android:background="@drawable/my_button" />
                             </LinearLayout>
                         </LinearLayout>

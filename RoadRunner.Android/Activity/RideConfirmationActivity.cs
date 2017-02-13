@@ -16,7 +16,7 @@ using RoadRunner.Shared.Classes;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "RideConfirmationActivity")]			
-	public class RideConfirmationActivity : BaseActivity
+	public class RideConfirmationActivity : NavigationActivity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{

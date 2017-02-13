@@ -21,7 +21,7 @@ using GalaSoft.MvvmLight.Helpers;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "RidePaymentActivity")]			
-	public class RidePaymentActivity : BaseActivity
+	public class RidePaymentActivity : NavigationActivity
 	{
 		private static bool IsFirstTime = true;
 
@@ -36,8 +36,6 @@ namespace RoadRunner.Android
 			base.OnCreate (savedInstanceState);
 
 			SetContentView(Resource.Layout.RidePayment);
-
-			AppSettings.currentActivity = this;
 
 			m_imgPayment = (ImageView)FindViewById(Resource.Id.imgPayment);
 
@@ -217,8 +215,8 @@ namespace RoadRunner.Android
 					{
 						if (Facade.Instance.CurrentRide.CanGoToTheRideConfirmation)
 						{
-							AppSettings.currentActivity.StartActivity(new Intent(this, typeof(RideConfirmationActivity)));
-							AppSettings.currentActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
+							StartActivity(new Intent(this, typeof(RideConfirmationActivity)));
+							OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 						}
 						else {
 							if (Facade.Instance.CurrentRide.ValidaionError != null && Facade.Instance.CurrentRide.ValidaionError.Count > 0)
@@ -230,9 +228,14 @@ namespace RoadRunner.Android
 								var delimeter = System.Environment.NewLine + System.Environment.NewLine;
 								var message = String.Join(delimeter, Facade.Instance.CurrentRide.ValidaionError.Select(r => r.ErrorMessage));
 
-								AppSettings.currentActivity.ShowMessageBox(header, message);
+								RunOnUiThread(() =>
+								{
+									ShowMessageBox(header, message);
+								});
 							}
 						}
+						//StartActivity(new Intent(this, typeof(RideConfirmationActivity)));
+						//OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 					});
 		}
 	}

@@ -19,8 +19,6 @@ namespace RoadRunnerNew.iOS
 
 		public string fromWhere = string.Empty;
 
-		public Action callback = null;
-
 		public AddCreditCardViewController (IntPtr handle) : base (handle)
 		{
 			Title = "ADD PAYMENT";
@@ -55,7 +53,7 @@ namespace RoadRunnerNew.iOS
 				{
 					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCNAME, edtCardHolderName.Text },
 					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCNUM, creditCardInfo.CardNumber},
-					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCTYPE, string.Format("{0}",(int)crditCardType)},
+					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CCTYPE, crditCardType.ToString()},
 					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CID, creditCardInfo.Cvv },
 					{Constant.INSERTCREDITCARDDETAILSFORPHONE_CUSTOMERID, AppSettings.UserID},
 					{Constant.INSERTCREDITCARDDETAILSFORPHONE_EXPDATE, creditCardInfo.ExpiryMonth + creditCardInfo.ExpiryYear.ToString ().Substring (2, 2) },
@@ -93,10 +91,6 @@ namespace RoadRunnerNew.iOS
 							PresentViewController(dvc, true, null);
 						}else{
 							thisController.PopViewController(true);
-							if (callback != null)
-							{
-								callback();
-							}
 						}
 					}
 					else

@@ -49,10 +49,10 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/email_hint"
                     android:gravity="bottom"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="15dp" />
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
+                    android:layout_height="1dp"
                     android:id="@+id/view1"
                     android:background="#ff6f6f6f" />
             </LinearLayout>
@@ -71,10 +71,10 @@
                     android:hint="@string/password_hint"
                     android:gravity="bottom"
                     android:password="true"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="15dp" />
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
+                    android:layout_height="1dp"
                     android:id="@+id/view1"
                     android:background="#ff6f6f6f" />
             </LinearLayout>
@@ -109,8 +109,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btnForgot"
                     android:background="@android:color/transparent"
-                    android:textColor="#ff172a8b"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#ff172a8b" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -187,8 +186,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
                     android:gravity="center"
-                    android:textColor="#ff0000e1"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#ff0000e1" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout

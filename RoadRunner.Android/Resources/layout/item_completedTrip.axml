@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_200sdp"
+    android:layout_height="200dp"
     android:layout_margin="2dp"
     android:padding="0dp"
     android:minWidth="25px"
@@ -12,7 +12,7 @@
         android:id="@+id/linearLayout3"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp">
+        android:layout_height="200dp">
         <FrameLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/linearLayout11"
                 android:background="#ff000000"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp">
                 <LinearLayout
@@ -43,7 +43,7 @@
                         android:minWidth="25px"
                         android:minHeight="25px"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_20sdp"
+                        android:layout_height="20dp"
                         android:id="@+id/linearLayout16" />
                     <LinearLayout
                         android:orientation="vertical"
@@ -54,16 +54,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
-                        android:layout_marginLeft="@dimen/_15sdp"
-                        android:layout_marginRight="@dimen/_15sdp">
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
                         <TextView
                             android:text="Reservation #: 15376254"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/txtTripID"
                             android:gravity="center_vertical"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:textSize="@dimen/_12sdp" />
+                            android:layout_marginLeft="10dp" />
                     </LinearLayout>
                     <LinearLayout
                         android:orientation="horizontal"
@@ -84,7 +83,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/imageView2"
-                                android:layout_margin="@dimen/_10sdp" />
+                                android:layout_margin="10dp" />
                         </LinearLayout>
                         <LinearLayout
                             android:orientation="vertical"
@@ -98,8 +97,7 @@
                                 android:layout_height="0dp"
                                 android:id="@+id/txtPickupTime"
                                 android:layout_weight="1"
-                                android:gravity="bottom"
-                                android:textSize="@dimen/_12sdp" />
+                                android:gravity="bottom" />
                             <TextView
                                 android:text="Los Angeles International AirportLos Angeles International Airport"
                                 android:layout_width="match_parent"
@@ -108,8 +106,7 @@
                                 android:layout_weight="1"
                                 android:textColor="#ffffffff"
                                 android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textSize="@dimen/_12sdp" />
+                                android:singleLine="true" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -131,7 +128,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/imageView3"
-                                android:layout_margin="@dimen/_10sdp" />
+                                android:layout_margin="10dp" />
                         </LinearLayout>
                         <LinearLayout
                             android:orientation="vertical"
@@ -145,8 +142,7 @@
                                 android:layout_height="0dp"
                                 android:id="@+id/txtDropoffTime"
                                 android:layout_weight="1"
-                                android:gravity="bottom"
-                                android:textSize="@dimen/_12sdp" />
+                                android:gravity="bottom" />
                             <TextView
                                 android:text="Los Angeles International Airport"
                                 android:layout_width="match_parent"
@@ -155,8 +151,7 @@
                                 android:layout_weight="1"
                                 android:textColor="#ffffffff"
                                 android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textSize="@dimen/_12sdp" />
+                                android:singleLine="true" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -166,7 +161,7 @@
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
+                android:layout_height="30dp"
                 android:id="@+id/linearLayout6">
                 <LinearLayout
                     android:orientation="vertical"
@@ -200,8 +195,7 @@
                             android:id="@+id/txtTripDate"
                             android:gravity="center"
                             android:textColor="#ffffffff"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textStyle="bold" />
                     </FrameLayout>
                 </LinearLayout>
                 <LinearLayout

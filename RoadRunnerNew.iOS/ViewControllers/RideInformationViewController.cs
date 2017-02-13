@@ -606,7 +606,7 @@ namespace RoadRunnerNew.iOS
 
 				Task runSync = Task.Factory.StartNew (async () => {
 					result = await AppData.ApiCall (Constant.GETFAREFORRESERVATIONCHARTER, dic); 
-				}).Unwrap();
+				});
 				runSync.Wait ();
 
 				var tt = AppData.ParseResponse (Constant.GETFAREFORRESERVATIONCHARTER, result);

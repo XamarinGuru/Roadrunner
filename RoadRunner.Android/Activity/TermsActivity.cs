@@ -17,7 +17,7 @@ using RoadRunner.Shared.Classes;
 namespace RoadRunner.Android
 {
 	[Activity(Label = "TermsActivity")]
-	public class TermsActivity : BaseActivity
+	public class TermsActivity : NavigationActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -64,7 +64,6 @@ namespace RoadRunner.Android
 						header.SetPadding(0, 15, 0, 0);
 						header.Gravity = GravityFlags.Center;
 						header.Typeface = txtHeader.Typeface;
-						header.TextSize = txtHeader.TextSize;
 						contentLinear.AddView(header);
 
 						txtBody.Visibility = ViewStates.Invisible;
@@ -73,7 +72,6 @@ namespace RoadRunner.Android
 						body.SetPadding(0, 5, 0, 0);
 						body.Gravity = GravityFlags.Center;
 						body.Typeface = txtBody.Typeface;
-						body.TextSize = txtBody.TextSize;
 						contentLinear.AddView(body);
 					}
 				});

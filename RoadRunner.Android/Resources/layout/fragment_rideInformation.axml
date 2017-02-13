@@ -4,814 +4,167 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.looper.loop.PreferencesFragment"
-    android:background="#ffabc8e2"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:background="#ffabc8e2">
 <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ff000000"
-        android:id="@+id/linearLayout56">
+        android:id="@+id/linearLayout1"
+        android:layout_margin="2dp"
+        android:background="#ffabc8e2">
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/linearLayout1"
-            android:layout_margin="2dp"
-            android:background="#ffabc8e2">
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout2"
+            android:layout_weight="5"
+            android:background="#ff000000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/linearLayout2"
-                android:layout_weight="5"
-                android:background="#ff000000"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout5"
+                android:background="#ff132441"
+                android:layout_margin="2dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout3"
+            android:layout_weight="6"
+            android:orientation="vertical">
+            <FrameLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frameLayout1">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout11"
+                    android:background="#ff000000"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+                    <FrameLayout
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:id="@+id/frameLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ff132441"
+                        android:layout_margin="2dp" />
+                </LinearLayout>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/linearLayout5"
-                    android:background="#ff132441"
-                    android:layout_margin="2dp">
+                    android:layout_height="40dp"
+                    android:id="@+id/linearLayout6">
                     <LinearLayout
                         android:orientation="vertical"
                         android:minWidth="25px"
                         android:minHeight="25px"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:id="@+id/linearLayout15"
-                        android:layout_weight="0.5" />
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:id="@+id/linearLayout16"
-                        android:layout_weight="10">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:id="@+id/linearLayout18"
-                            android:layout_weight="1">
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:id="@+id/linearLayout23"
-                                android:layout_weight="2" />
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:id="@+id/linearLayout22"
-                                android:background="#ff000000"
-                                android:layout_weight="8">
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout26"
-                                    android:layout_margin="2dp"
-                                    android:background="#ffe6e6e6">
-                                    <TextView
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/txtPickupLocation"
-                                        android:layout_marginLeft="10dp"
-                                        android:textColor="#ff000000"
-                                        android:gravity="center_vertical"
-                                        android:hint="Pickup Location"
-                                        android:ellipsize="end"
-                                        android:singleLine="true"
-                                        android:textSize="@dimen/_12sdp" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:id="@+id/linearLayout19"
-                            android:layout_weight="1">
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:id="@+id/linearLayout24"
-                                android:layout_weight="2" />
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:id="@+id/linearLayout25"
-                                android:layout_weight="8"
-                                android:background="#ff000000">
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout27"
-                                    android:layout_margin="2dp"
-                                    android:background="#ffe6e6e6">
-                                    <TextView
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/txtDropoffLocation"
-                                        android:layout_marginLeft="10dp"
-                                        android:textColor="#ff000000"
-                                        android:hint="DropOff Location"
-                                        android:gravity="center_vertical"
-                                        android:ellipsize="end"
-                                        android:singleLine="true"
-                                        android:textSize="@dimen/_12sdp" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:id="@+id/linearLayout20"
-                            android:layout_weight="1">
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/linearLayout28"
-                                android:layout_weight="3">
-                                <TextView
-                                    android:text="Point to Point"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/textView7"
-                                    android:gravity="center"
-                                    android:textSize="@dimen/_12sdp" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/linearLayout32"
-                                android:layout_weight="1">
-                                <Switch
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/switchPorH"
-                                    android:layout_gravity="center_vertical"
-                                    android:gravity="center" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/linearLayout29"
-                                android:layout_weight="3">
-                                <TextView
-                                    android:text="Hourly Charter"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/textView8"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:textSize="@dimen/_12sdp" />
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:id="@+id/linearLayout21"
-                            android:layout_weight="1">
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/linearLayout30"
-                                android:layout_weight="1">
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout33"
-                                    android:layout_weight="2">
-                                    <TextView
-                                        android:text="Number of Passengers"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/textView11"
-                                        android:gravity="center"
-                                        android:textColor="#ffffffff"
-                                        android:textSize="@dimen/_12sdp" />
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout34"
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp">
-                                    <Spinner
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:popupBackground="#ff132441"
-                                        android:id="@+id/spPassengers"
-                                        android:spinnerMode="dropdown" />
-                                </LinearLayout>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/linearLayout31"
-                                android:layout_weight="1"
-                                android:minWidth="25px"
-                                android:minHeight="25px">
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout36"
-                                    android:layout_weight="2">
-                                    <TextView
-                                        android:text="Number of     Hours"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/textView12"
-                                        android:textColor="#ffffffff"
-                                        android:gravity="center"
-                                        android:textSize="@dimen/_12sdp" />
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/linearLayout35"
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp">
-                                    <Spinner
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:popupBackground="#ff132441"
-                                        android:id="@+id/spHours"
-                                        android:spinnerMode="dropdown" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
+                        android:id="@+id/linearLayout8"
+                        android:layout_weight="1" />
                     <LinearLayout
                         android:orientation="vertical"
                         android:minWidth="25px"
                         android:minHeight="25px"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:id="@+id/linearLayout17"
-                        android:layout_weight="0.5" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/linearLayout3"
-                android:layout_weight="6"
-                android:orientation="vertical">
-                <FrameLayout
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/frameLayout1">
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:minWidth="25px"
-                        android:minHeight="25px"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/linearLayout11"
-                        android:background="#ff000000"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp">
+                        android:id="@+id/linearLayout9"
+                        android:layout_weight="5"
+                        android:background="#ff000000">
                         <FrameLayout
                             android:minWidth="25px"
                             android:minHeight="25px"
-                            android:id="@+id/frameLayout2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ff132441"
-                            android:layout_margin="2dp">
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:minWidth="25px"
-                                android:minHeight="25px"
+                            android:id="@+id/frameLayout3"
+                            android:layout_margin="1dp"
+                            android:background="#ff3c5a7e">
+                            <TextView
+                                android:text="Vehicle Selection"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:id="@+id/linearLayout38">
-                                <Space
-                                    android:id="@+id/space1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="@dimen/_30sdp" />
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:id="@+id/linearLayout37"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_marginRight="5dp">
-                                    <RadioGroup
-                                        android:id="@+id/rgUpto"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="@dimen/_10sdp"
-                                        android:gravity="center"
-                                        android:orientation="horizontal">
-                                        <RadioButton
-                                            android:id="@+id/rb1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/component_rbtn_selector"
-                                            android:button="@null"
-                                            android:gravity="center"
-                                            android:padding="5dp"
-                                            android:text="Up to 6"
-                                            android:textColor="@drawable/component_rbtn_textcolor_selector"
-                                            android:textSize="@dimen/_12sdp" />
-                                        <RadioButton
-                                            android:id="@+id/rb2"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/component_rbtn_selector"
-                                            android:button="@null"
-                                            android:checked="true"
-                                            android:gravity="center"
-                                            android:padding="5dp"
-                                            android:text="Up to 8"
-                                            android:textColor="@drawable/component_rbtn_textcolor_selector"
-                                            android:textSize="@dimen/_12sdp" />
-                                        <RadioButton
-                                            android:id="@+id/rb3"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/component_rbtn_selector"
-                                            android:button="@null"
-                                            android:gravity="center"
-                                            android:padding="5dp"
-                                            android:text="Up to 12"
-                                            android:textColor="@drawable/component_rbtn_textcolor_selector"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </RadioGroup>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:id="@+id/linearLayout39"
-                                    android:layout_weight="1">
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout42"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="Shared"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView13"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout43"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="Private"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView14"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout44"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="Black"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView15"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout45"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="SUB"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView16"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout46"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="Limo"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView17"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout47"
-                                        android:layout_weight="1">
-                                        <TextView
-                                            android:text="Bus"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/textView18"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_12sdp" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout48"
-                                        android:layout_weight="1">
-                                        <ImageView
-                                            android:src="@drawable/icon_wheelchair"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/imageView2" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:id="@+id/linearLayout40"
-                                    android:layout_weight="1">
-                                    <FrameLayout
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/frameLayout4">
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:minWidth="25px"
-                                            android:minHeight="25px"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="5dp"
-                                            android:id="@+id/linearLayout52"
-                                            android:layout_gravity="center">
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:minWidth="25px"
-                                                android:minHeight="25px"
-                                                android:layout_width="0dp"
-                                                android:layout_height="match_parent"
-                                                android:id="@+id/linearLayout53"
-                                                android:layout_weight="1" />
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:minWidth="25px"
-                                                android:minHeight="25px"
-                                                android:layout_width="0dp"
-                                                android:layout_height="match_parent"
-                                                android:id="@+id/linearLayout54"
-                                                android:layout_weight="10"
-                                                android:background="#ffa7a5a5" />
-                                            <LinearLayout
-                                                android:orientation="vertical"
-                                                android:minWidth="25px"
-                                                android:minHeight="25px"
-                                                android:layout_width="0dp"
-                                                android:layout_height="match_parent"
-                                                android:id="@+id/linearLayout55"
-                                                android:layout_weight="1" />
-                                        </LinearLayout>
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:minWidth="25px"
-                                            android:minHeight="25px"
-                                            android:id="@+id/linearLayout37"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent">
-                                            <RadioGroup
-                                                android:id="@+id/rgVehicle"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:gravity="center"
-                                                android:orientation="horizontal">
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid7"
-                                                    android:background="@drawable/s_vehicle_shared"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid6"
-                                                    android:background="@drawable/s_vehicle_private"
-                                                    android:button="@null"
-                                                    android:checked="true"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid5"
-                                                    android:background="@drawable/s_vehicle_black"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid4"
-                                                    android:background="@drawable/s_vehicle_suv"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid3"
-                                                    android:background="@drawable/s_vehicle_limo"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid2"
-                                                    android:background="@drawable/s_vehicle_bus"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                                <RadioButton
-                                                    android:id="@+id/radioAndroid1"
-                                                    android:background="@drawable/s_vehicle_wheel"
-                                                    android:button="@null"
-                                                    android:checked="false"
-                                                    android:gravity="center"
-                                                    android:padding="@dimen/_5sdp"
-                                                    android:layout_width="0dp"
-                                                    android:layout_height="match_parent"
-                                                    android:layout_weight="1" />
-                                            </RadioGroup>
-                                        </LinearLayout>
-                                    </FrameLayout>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:id="@+id/linearLayout41"
-                                    android:layout_weight="1">
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout49"
-                                        android:layout_weight="1" />
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout50"
-                                        android:layout_weight="10"
-                                        android:layout_margin="@dimen/_5sdp"
-                                        android:background="#ffa7a5a5">
-                                        <TextView
-                                            android:text="Complete all fields above"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/txtComment"
-                                            android:gravity="center"
-                                            android:textSize="@dimen/_15sdp"
-                                            android:textColor="#ffffffff" />
-                                    </LinearLayout>
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:minWidth="25px"
-                                        android:minHeight="25px"
-                                        android:layout_width="0dp"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/linearLayout51"
-                                        android:layout_weight="1" />
-                                </LinearLayout>
-                            </LinearLayout>
+                                android:id="@+id/textView1"
+                                android:gravity="center"
+                                android:textColor="#ffffffff"
+                                android:textStyle="bold" />
                         </FrameLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:minWidth="25px"
                         android:minHeight="25px"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:id="@+id/linearLayout6">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:minWidth="25px"
-                            android:minHeight="25px"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:id="@+id/linearLayout8"
-                            android:layout_weight="1" />
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:minWidth="25px"
-                            android:minHeight="25px"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:id="@+id/linearLayout9"
-                            android:layout_weight="5"
-                            android:background="#ff000000">
-                            <FrameLayout
-                                android:minWidth="25px"
-                                android:minHeight="25px"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/frameLayout3"
-                                android:layout_margin="1dp"
-                                android:background="#ff3c5a7e">
-                                <TextView
-                                    android:text="Vehicle Selection"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/textView1"
-                                    android:gravity="center"
-                                    android:textColor="#ffffffff"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/_12sdp" />
-                            </FrameLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:minWidth="25px"
-                            android:minHeight="25px"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:id="@+id/linearLayout10"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout10"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout4"
+            android:layout_weight="1.5">
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/linearLayout4"
-                android:layout_weight="1.5">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="0dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout12"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout13"
+                android:layout_weight="5">
+                <Button
+                    android:text="NEXT"
+                    android:id="@+id/btn_GoToLocation"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/linearLayout12"
-                    android:layout_weight="1" />
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/linearLayout13"
-                    android:layout_weight="5">
-                    <Button
-                        android:text="NEXT"
-                        android:id="@+id/btn_GoToLocation1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_8sdp"
-                        android:background="@drawable/my_button"
-                        android:textSize="@dimen/_12sdp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/linearLayout14"
-                    android:layout_weight="1" />
+                    android:layout_margin="8dp"
+                    android:background="@drawable/my_button" />
             </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout14"
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

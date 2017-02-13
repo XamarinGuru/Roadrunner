@@ -93,13 +93,12 @@ namespace RoadRunnerNew.iOS
 				UIStoryboard sb = UIStoryboard.FromName ("MainStoryboard", null);
 				AddCreditCardViewController pvc = (AddCreditCardViewController)sb.InstantiateViewController ("AddCreditCardViewController");
 				pvc.fromWhere = "map";
-				pvc.callback = LoadCreditCards;
 				NavigationController.PushViewController (pvc, true);
 			};
 
 			btnReadyPickup.TouchUpInside += ReadyForPickup;
 
-			btnPickupLocation.TouchUpInside += (object sender, EventArgs e) => {
+			txtSearchLocation.EditingDidBegin += (object sender, EventArgs e) => {
 				UIStoryboard sb = UIStoryboard.FromName ("MainStoryboard", null);
 				PickUpViewController pvc = (PickUpViewController)sb.InstantiateViewController ("PickUpViewController");
 				pvc.IsPickUpLocation = true;
@@ -121,7 +120,7 @@ namespace RoadRunnerNew.iOS
 							UIStoryboard sb = UIStoryboard.FromName ("MainStoryboard", null);
 							RideInformationViewController pvc = (RideInformationViewController)sb.InstantiateViewController ("ScheduleARideViewController");
 							pvc.isFromMenu = false;
-							AppSettings.CurrentNavigation.PushViewController (pvc, true);
+							this.NavigationController.PushViewController (pvc, true);
 						} else {
 							if (Facade.Instance.CurrentRide.ValidaionError != null && Facade.Instance.CurrentRide.ValidaionError.Count > 0) {
 								string header = Facade.Instance.CurrentRide.ValidaionError.Count > 1
@@ -138,7 +137,6 @@ namespace RoadRunnerNew.iOS
 
 		public override void ViewWillAppear (bool animated)
 		{
-			AppSettings.CurrentNavigation = this.NavigationController;
 			base.ViewWillAppear (animated);
 			//thisController = NavigationController;
 			LoadCreditCards ();
@@ -175,7 +173,6 @@ namespace RoadRunnerNew.iOS
 
 		private readonly List<Marker> _currentMarkers = new List<Marker>();
 
-		//private async System.Threading.Tasks.Task ResetMapView()
 		private async System.Threading.Tasks.Task ResetMapView()
 		{
 			try
@@ -285,11 +282,11 @@ namespace RoadRunnerNew.iOS
 				{
 					var reservation = availableReservations[i];
 
-					//Task runSync = Task.Factory.StartNew (async () => {
+					Task runSync = Task.Factory.StartNew (async () => {
 						var pickupData = await GetPickupDataForReservation(reservation);
 						_pickups.Add(pickupData);
-					//}).Unwrap ();
-					//runSync.Wait ();
+					}).Unwrap ();
+					runSync.Wait ();
 				}
 
 				var bounds = new CoordinateBounds();
@@ -393,7 +390,7 @@ namespace RoadRunnerNew.iOS
 				HideLoadingView();
 				return null;
 			}
-			//HideLoadingView();
+			HideLoadingView();
 		}
 
 		private async void CallForReadyPickup(string reservationId)
@@ -434,7 +431,7 @@ namespace RoadRunnerNew.iOS
 			}
 			HideLoadingView();
 		}
-		private async void LoadCreditCards()
+		private void LoadCreditCards()
 		{
 			ShowLoadingView ("Loading data...");
 
@@ -447,12 +444,16 @@ namespace RoadRunnerNew.iOS
 
 			String result = String.Empty;
 
-			//System.Threading.Tasks.Task runSync = System.Threading.Tasks.Task.Factory.StartNew(async () => {
+			System.Threading.Tasks.Task runSync = System.Threading.Tasks.Task.Factory.StartNew(async () => {
 				result = await AppData.ApiCall(Constant.GETCREDITCARDDETAILSNEWFORPHONE, dic);
 
 				var tt = (GetCreditCardDetailsNewForPhoneResponse) AppData.ParseResponse(Constant.GETCREDITCARDDETAILSNEWFORPHONE, result);
 				var listCreditCards = new List<KeyValuePair<object, string>>();
 				var listCreditCardImages = new List<KeyValuePair<object, object>>();
+
+				foreach(var card in  tt.CardList){
+					listCreditCards.Add(new KeyValuePair<object, string>(card.Id,card.CardNumber));
+				}
 
 				InvokeOnMainThread(() => { 
 					foreach(var card in  tt.CardList){
@@ -500,10 +501,10 @@ namespace RoadRunnerNew.iOS
 				});
 
 				HideLoadingView();
-			//}).Unwrap();
+			}).Unwrap();
 		}
 
-		private async void VerifyPromoCode(object sender, EventArgs e) {
+		private void VerifyPromoCode(object sender, EventArgs e) {
 			ShowLoadingView("Veryfying promo code");
 			var dic = new Dictionary<String, String> {
 				{ Constant.VALIDATEDISCOUNTCOUPON_CODE, txtMapPromo.Text },
@@ -519,11 +520,11 @@ namespace RoadRunnerNew.iOS
 			try {
 				UserTrackingReporter.TrackUser (Constant.CATEGORY_PROMO_CODE, "Validating promo code");
 
-				//Task runSync = Task.Factory.StartNew (async () => {
+				Task runSync = Task.Factory.StartNew (async () => {
 					result = await AppData.ApiCall (Constant.VALIDATEDISCOUNTCOUPON, dic);
 					tt = (ValidateDiscountCouponResponse)AppData.ParseResponse (Constant.VALIDATEDISCOUNTCOUPON, result);
-				//}).Unwrap ();
-				//runSync.Wait ();
+				}).Unwrap ();
+				runSync.Wait ();
 
 			} catch (Exception ex) {
 				CrashReporter.Report (ex);

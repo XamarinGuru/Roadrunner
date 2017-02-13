@@ -56,8 +56,7 @@
                         android:background="@android:color/transparent"
                         android:id="@+id/txtSearchLocation"
                         android:hint="Pick-Up Location"
-                        android:singleLine="true"
-                        android:textSize="@dimen/_15sdp"
+                        android:textSize="15dp"
                         android:textColor="#ff000000" />
                 </LinearLayout>
             </LinearLayout>
@@ -67,13 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:id="@+id/linearLayout4"
-            android:layout_weight="10">
-            <fragment
-                android:id="@+id/map"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                class="com.google.android.gms.maps.SupportMapFragment" />
-        </LinearLayout>
+            android:layout_weight="10" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -106,10 +99,10 @@
                         android:layout_width="match_parent"
                         android:id="@+id/linearLayout12"
                         android:layout_weight="1"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
                         android:background="#ffe6e6e6"
                         android:layout_height="0dp">
                         <LinearLayout
@@ -149,10 +142,10 @@
                         android:layout_width="match_parent"
                         android:id="@+id/linearLayout13"
                         android:layout_weight="1"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
                         android:background="#ffe6e6e6"
                         android:layout_height="0dp">
                         <LinearLayout
@@ -183,7 +176,7 @@
                                 android:background="@android:color/transparent"
                                 android:id="@+id/txtPromoCode"
                                 android:gravity="center_vertical"
-                                android:textSize="@dimen/_12sdp"
+                                android:textSize="12dp"
                                 android:hint="Enter Promo Code"
                                 android:textColor="#ff000000" />
                         </LinearLayout>
@@ -211,7 +204,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/btnAddPayment"
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="13dp"
                             android:background="@drawable/my_button" />
                     </LinearLayout>
                     <LinearLayout
@@ -228,8 +221,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/btnVerifyPromo"
-                            android:background="@drawable/my_button"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="13dp"
+                            android:background="@drawable/my_button" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -248,28 +241,17 @@
                 android:layout_height="match_parent"
                 android:id="@+id/linearLayout20"
                 android:layout_weight="6">
-                <RelativeLayout
-                    android:minWidth="25px"
-                    android:minHeight="25px"
+                <Button
+                    android:text="READY FOR PICKUP"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/relativeLayout1"
-                    android:gravity="center">
-                    <Spinner
-                        android:id="@+id/spReadyForPickup"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:spinnerMode="dialog" />
-                    <Button
-                        android:text="READY FOR PICKUP"
-                        android:id="@+id/btnReadyPickup"
-                        android:textSize="@dimen/_10sdp"
-                        android:background="@drawable/btnreadyforpickup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp" />
-                </RelativeLayout>
+                    android:id="@+id/button3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="13dp"
+                    android:background="@drawable/btnreadyforpickup" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -284,11 +266,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnBookARide"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="13dp"
                     android:background="@drawable/my_button" />
             </LinearLayout>
         </LinearLayout>

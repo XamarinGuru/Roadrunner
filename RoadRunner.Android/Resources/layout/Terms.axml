@@ -8,18 +8,18 @@
         android:id="@+id/titleBarLinearLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
+        android:layout_height="55dp"
         android:background="#ff3c5a7e">
         <ImageButton
             android:id="@+id/btn_back"
             android:scaleType="fitXY"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_width="@dimen/_18sdp"
+            android:layout_height="30dp"
+            android:layout_width="18dp"
             android:padding="0dp"
             android:requiresFadingEdge="none"
             android:fadingEdge="none"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/icon_back" />
         <TextView
             android:id="@+id/v_book_ride"
@@ -30,16 +30,16 @@
             android:layout_gravity="center"
             android:clickable="true"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="18dp"
             android:layout_centerHorizontal="true" />
         <ImageView
             android:src="@drawable/icon_mark"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
             android:id="@+id/imageView1"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
             android:scaleType="fitXY" />
     </RelativeLayout>
     <LinearLayout
@@ -74,7 +74,7 @@
                     android:id="@+id/txtHeader"
                     android:gravity="center_horizontal"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="17dp"
                     android:textColor="#ffffffff" />
                 <TextView
                     android:text="Online Reservations must be booked 24 ours in advance. Please note"
@@ -82,7 +82,7 @@
                     android:layout_height="0dp"
                     android:id="@+id/txtBody"
                     android:gravity="center_horizontal"
-                    android:textSize="@dimen/_7sdp" />
+                    android:textSize="16dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

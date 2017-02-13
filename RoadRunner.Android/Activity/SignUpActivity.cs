@@ -20,7 +20,7 @@ using GalaSoft.MvvmLight.Helpers;
 namespace RoadRunner.Android
 {
 	[Activity(Label = "SignUpActivity")]
-	public class SignUpActivity : BaseActivity
+	public class SignUpActivity : NavigationActivity
 	{
 		private RegisterVM ViewModel { get; set; }
 
@@ -90,9 +90,7 @@ namespace RoadRunner.Android
 			var btnBack = (ImageButton)FindViewById(Resource.Id.btn_back);
 			btnBack.Click += delegate (object sender, EventArgs e)
 			{
-				var preActivity = new Intent(this, typeof(LoginActivity));
-				StartActivity(preActivity);
-				OverridePendingTransition(Resource.Animation.fromRight, Resource.Animation.toLeft);
+				OnBack();
 			};
 
 			this.SetBinding(

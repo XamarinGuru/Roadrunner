@@ -19,7 +19,7 @@ using RoadRunner.Shared.Classes;
 namespace RoadRunner.Android
 {
 	[Activity (Label = "PickupLocationActivity")]			
-	public class PickupLocationActivity : BaseActivity, ILocationListener
+	public class PickupLocationActivity : NavigationActivity, ILocationListener
 	{
 
 		//ArrayList<String> listItems=new ArrayList<String>();
@@ -63,7 +63,7 @@ namespace RoadRunner.Android
 		private void UpdateSearchResult(object sender, SearchView.QueryTextChangeEventArgs e)
 		{
 			
-			//ShowLoadingView ("Searching...");
+			ShowLoadingView ("Searching...");
 			var searchTerm = e.NewText.Trim ();
 
 			Task runSync = Task.Factory.StartNew (async (object inputObj) => {
@@ -83,7 +83,7 @@ namespace RoadRunner.Android
 						adapter.NotifyDataSetChanged();
 					});
 				}
-				//HideLoadingView ();
+				HideLoadingView ();
 			}, searchTerm).Unwrap (
 			);
 		}

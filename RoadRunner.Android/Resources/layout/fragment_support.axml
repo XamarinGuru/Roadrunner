@@ -42,14 +42,14 @@
                     android:id="@+id/textView1"
                     android:gravity="center_horizontal"
                     android:textColor="#ffffffff"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:text="Contact Roadrunner huttle at any time for questions on new or existing reservations, or for help with pricing or billing matters. Our customer service representatives are always there for you."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
                     android:layout_margin="10dp"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="15dp" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:minWidth="25px"
@@ -81,7 +81,7 @@
                                 android:id="@+id/textView3"
                                 android:textColor="#ff000000"
                                 android:gravity="center"
-                                android:textSize="@dimen/_17sdp"
+                                android:textSize="17dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                         <LinearLayout
@@ -99,7 +99,7 @@
                                 android:id="@+id/textView4"
                                 android:textColor="#ff686868"
                                 android:gravity="center"
-                                android:textSize="@dimen/_16sdp" />
+                                android:textSize="16dp" />
                         </LinearLayout>
                         <LinearLayout
                             android:orientation="vertical"
@@ -115,7 +115,7 @@
                                 android:layout_height="match_parent"
                                 android:id="@+id/txtSupportEmail"
                                 android:gravity="center"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="16dp"
                                 android:textColor="#ff4b31bd" />
                         </LinearLayout>
                     </LinearLayout>
@@ -151,7 +151,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:id="@+id/textView5"
-                                android:textSize="@dimen/_17sdp"
+                                android:textSize="17dp"
                                 android:textColor="#ff000000"
                                 android:gravity="center"
                                 android:textStyle="bold" />
@@ -170,7 +170,7 @@
                                 android:layout_height="match_parent"
                                 android:id="@+id/textView6"
                                 android:textColor="#ff686868"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="16dp"
                                 android:gravity="center" />
                         </LinearLayout>
                         <LinearLayout
@@ -187,7 +187,7 @@
                                 android:layout_height="match_parent"
                                 android:id="@+id/txtSupportPhone"
                                 android:gravity="center"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="16dp"
                                 android:textColor="#ff4b31bd" />
                         </LinearLayout>
                         <LinearLayout
@@ -204,7 +204,7 @@
                                 android:layout_height="match_parent"
                                 android:id="@+id/txtSupportFree"
                                 android:gravity="center"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="16dp"
                                 android:textColor="#ff4b31bd" />
                         </LinearLayout>
                         <LinearLayout
@@ -221,7 +221,7 @@
                                 android:layout_height="match_parent"
                                 android:id="@+id/txtSupportFax"
                                 android:gravity="center"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="16dp"
                                 android:textColor="#ff4b31bd" />
                         </LinearLayout>
                     </LinearLayout>
